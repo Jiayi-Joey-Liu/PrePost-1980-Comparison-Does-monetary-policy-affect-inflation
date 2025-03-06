@@ -1,0 +1,195 @@
+﻿,Name,Sample,Transformation,Description,# in Data76.m
+1,Q1TDG10,1976:2 - 2005:6,5,New domestic autos,306
+2,Q1NDC10,1976:2 - 2005:6,5,New foreign autos,307
+3,Q1NFC10,1976:2 - 2005:6,5,Net transactions in used autos,308
+4,Q1NET10,1976:2 - 2005:6,5,Used auto margin,309
+5,Q1MAR10,1976:2 - 2005:6,5,Employee reimbursement,310
+6,Q1REE10,1976:2 - 2005:6,5,"Trucks, new and net used",311
+7,Q1TRU10,1976:2 - 2005:6,5,Recreational vehicles,312
+8,Q1REV10,1976:2 - 2005:6,5,Tires and tubes,313
+9,Q1TAT10,1976:2 - 2005:6,5,Accessories and parts,314
+10,Q1PAA10,1976:2 - 2005:6,5,"Furniture, including mattresses and bedsprings",315
+11,Q1FNR10,1976:2 - 2005:6,5,Major household appliances,316
+12,Q1MHA10,1976:2 - 2005:6,5,Small electric appliances,317
+13,Q1SEA10,1976:2 - 2005:6,5,"China, glassware, tableware, and utensils",318
+14,Q1CHN10,1976:2 - 2005:6,5,"Video and audio goods, including musical instruments, and computer goods",319
+15,Q1RAD10,1976:2 - 2005:6,5,Floor coverings,320
+16,Q1FLR10,1976:2 - 2005:6,5,"Clocks, lamps, and furnishings",321
+17,Q1CLF10,1976:2 - 2005:6,5,"Blinds, rods, and other",322
+18,Q1TEX10,1976:2 - 2005:6,5,Writing equipment,323
+19,Q1WTR10,1976:2 - 2005:6,5,"Tools, hardware, and supplies",324
+20,Q1HDW10,1976:2 - 2005:6,5,Outdoor eqpt and supplies,325
+21,Q1LWN10,1976:2 - 2005:6,5,Ophthalmic products and orthopedic appliances,326
+22,Q1OPT10,1976:2 - 2005:6,5,Guns,327
+23,Q1GUN10,1976:2 - 2005:6,5,Sporting equipment,328
+24,Q1SPT10,1976:2 - 2005:6,5,Photographic equipment,329
+25,Q1CAM10,1976:2 - 2005:6,5,Bicycles,330
+26,Q1BCY10,1976:2 - 2005:6,5,Motorcycles,331
+27,Q1MCY10,1976:2 - 2005:6,5,Pleasure boats,332
+28,Q1BOA10,1976:2 - 2005:6,5,Pleasure aircraft,333
+29,Q1AIR10,1976:2 - 2005:6,5,Jewelry and watches,334
+30,Q1JRY10,1976:2 - 2005:6,5,Books and maps,335
+31,Q1BKS10,1976:2 - 2005:6,5,Cereals,336
+32,Q1TND10,1976:2 - 2005:6,5,Bakery products,337
+33,Q1GRA10,1976:2 - 2005:6,5,Beef and veal,338
+34,Q1BAK10,1976:2 - 2005:6,5,Pork,339
+35,Q1BEE10,1976:2 - 2005:6,5,Other meats,340
+36,Q1POR10,1976:2 - 2005:6,5,Poultry,341
+37,Q1MEA10,1976:2 - 2005:6,5,Fish and seafood,342
+38,Q1POU10,1976:2 - 2005:6,5,Eggs,343
+39,Q1FIS10,1976:2 - 2005:6,5,Fresh milk and cream,344
+40,Q1GGS10,1976:2 - 2005:6,5,Processed dairy products,345
+41,Q1MIL10,1976:2 - 2005:6,5,Fresh fruits,346
+42,Q1DAI10,1976:2 - 2005:6,5,Fresh vegetables,347
+43,Q1FRU10,1976:2 - 2005:6,5,Processed fruits and vegetables,348
+44,Q1VEG10,1976:2 - 2005:6,5,Juices and nonalcoholic drinks,349
+45,Q1PFV10,1976:2 - 2005:6,5,"Coffee, tea and beverage materials",350
+46,Q1JNB10,1976:2 - 2005:6,5,Fats and oils,351
+47,Q1CTM10,1976:2 - 2005:6,5,Sugar and sweets,352
+48,Q1FAT10,1976:2 - 2005:6,5,Other foods,353
+49,Q1SWE10,1976:2 - 2005:6,5,Pet food,354
+50,Q1OFD10,1976:2 - 2005:6,5,"Beer and ale, at home",355
+51,Q1PEF10,1976:2 - 2005:6,5,"Wine and brandy, at home",356
+52,Q1MLT10,1976:2 - 2005:6,5,"Distilled spirits, at home",357
+53,Q1WIN10,1976:2 - 2005:6,5,Elementary and secondary school lunch,358
+54,Q1LIQ10,1976:2 - 2005:6,5,Higher education school lunch,359
+55,Q1ESL10,1976:2 - 2005:6,5,Other purchased meals,360
+56,Q1HSL10,1976:2 - 2005:6,5,Alcohol in purchased meals,361
+57,Q1OPM10,1976:2 - 2005:6,5,Food supplied civilians,362
+58,Q1APM10,1976:2 - 2005:6,5,Food supplied military,363
+59,Q1CFD10,1976:2 - 2005:6,5,Food produced and consumed on farms,364
+60,Q1MFD10,1976:2 - 2005:6,5,Shoes (12),365
+61,Q1FFD10,1976:2 - 2005:6,5,Clothing for females,366
+62,Q1SHU10,1976:2 - 2005:6,5,Clothing for infants,367
+63,Q1WGC10,1976:2 - 2005:6,5,Sewing goods for females,368
+64,Q1WIC10,1976:2 - 2005:6,5,Luggage for females,369
+65,Q1WSG10,1976:2 - 2005:6,5,Clothing for males,370
+66,Q1WUG10,1976:2 - 2005:6,5,Sewing goods for males,371
+67,Q1MBC10,1976:2 - 2005:6,5,Luggage for males,372
+68,Q1MSG10,1976:2 - 2005:6,5,Standard clothing issued to military personnel (n.d.),373
+69,Q1MUG10,1976:2 - 2005:6,5,Gasoline and other motor fuel,374
+70,Q1MIC10,1976:2 - 2005:6,5,Lubricants,375
+71,Q1GAS10,1976:2 - 2005:6,5,Fuel oil,376
+72,Q1LUB10,1976:2 - 2005:6,5,Liquified petroleum gas and other fuel,377
+73,Q1OIL10,1976:2 - 2005:6,5,Tobacco products,378
+74,Q1LPG10,1976:2 - 2005:6,5,Soap,379
+75,Q1TOB10,1976:2 - 2005:6,5,Cosmetics and perfumes,380
+76,Q1SOA10,1976:2 - 2005:6,5,Other personal hygiene goods,381
+77,Q1CSM10,1976:2 - 2005:6,5,Semidurable house furnishings,382
+78,Q1OPH10,1976:2 - 2005:6,5,Cleaning preparations,383
+79,Q1SDH10,1976:2 - 2005:6,5,Lighting supplies,384
+80,Q1CLE10,1976:2 - 2005:6,5,Paper products,385
+81,Q1LIG10,1976:2 - 2005:6,5,Prescription drugs,386
+82,Q1PAP10,1976:2 - 2005:6,5,Nonprescription drugs,387
+83,Q1RXD10,1976:2 - 2005:6,5,Medical supplies,388
+84,Q1NRX10,1976:2 - 2005:6,5,Gynecological goods,389
+85,Q1MDS10,1976:2 - 2005:6,5,"Toys, dolls, and games",390
+86,Q1GYN10,1976:2 - 2005:6,5,"Sport supplies, including ammunition",391
+87,Q1DOL10,1976:2 - 2005:6,5,Film and photo supplies,392
+88,Q1AMM10,1976:2 - 2005:6,5,Stationery and school supplies,393
+89,Q1FLM10,1976:2 - 2005:6,5,Greeting cards,394
+90,Q1STS10,1976:2 - 2005:6,5,Government expenditures abroad,395
+91,Q1GRE10,1976:2 - 2005:6,5,Other private services,396
+92,Q1ART10,1976:2 - 2005:6,5,Less: Personal remittances in kind to nonresidents,397
+93,Q1ARS10,1976:2 - 2005:6,5,Magazines and sheet music,398
+94,Q1REM10,1976:2 - 2005:6,5,Newspapers,399
+95,Q1MGZ10,1976:2 - 2005:6,5,"Flowers, seeds, and potted plants",400
+96,Q1NWP10,1976:2 - 2005:6,5,Owner occupied mobile homes,401
+97,Q1FLO10,1976:2 - 2005:6,5,Owner occupied stationary homes,402
+98,Q1TSS10,1976:2 - 2005:6,5,Tenant occupied mobile homes,403
+99,Q1OMH10,1976:2 - 2005:6,5,Tenant occupied stationary homes,404
+100,Q1OST10,1976:2 - 2005:6,5,Tenant landlord durables,405
+101,Q1TMH10,1976:2 - 2005:6,5,Rental value of farm dwellings,406
+102,Q1TSP10,1976:2 - 2005:6,5,Hotels and motels,407
+103,Q1TLD10,1976:2 - 2005:6,5,Clubs and fraternity housing,408
+104,Q1FAR10,1976:2 - 2005:6,5,Higher education housing,409
+105,Q1HOT10,1976:2 - 2005:6,5,Elem and second education housing,410
+106,Q1HFR10,1976:2 - 2005:6,5,Tenant group room and board,411
+107,Q1HHE10,1976:2 - 2005:6,5,Tenant group employee lodging,412
+108,Q1HES10,1976:2 - 2005:6,5,Electricity,413
+109,Q1TGR10,1976:2 - 2005:6,5,Gas,414
+110,Q1TGL10,1976:2 - 2005:6,5,Water and sewerage maintenance,415
+111,Q1ELC10,1976:2 - 2005:6,5,Refuse collection,416
+112,Q1NGS10,1976:2 - 2005:6,5,Local and cellular telephone,417
+113,Q1WSM10,1976:2 - 2005:6,5,Intrastate toll calls,418
+114,Q1REF10,1976:2 - 2005:6,5,Interstate toll calls,419
+115,Q1LOC10,1976:2 - 2005:6,5,"Domestic service, cash",420
+116,Q1INC10,1976:2 - 2005:6,5,"Domestic service, in kind",421
+117,Q1ITC10,1976:2 - 2005:6,5,Moving and storage,422
+118,Q1DMC10,1976:2 - 2005:6,5,Household insurance premiums,423
+119,Q1DMI10,1976:2 - 2005:6,5,Less: Household insurance benefits paid,424
+120,Q1MSE10,1976:2 - 2005:6,5,Rug and furniture cleaning,425
+121,Q1FIP10,1976:2 - 2005:6,5,Electrical repair,426
+122,Q1FIB10,1976:2 - 2005:6,5,Reupholstery and furniture repair,427
+123,Q1RCL10,1976:2 - 2005:6,5,Postage,428
+124,Q1ERE10,1976:2 - 2005:6,5,"Household operation services, n.e.c.",429
+125,Q1FRE10,1976:2 - 2005:6,5,Motor vehicle repair,430
+126,Q1PST10,1976:2 - 2005:6,5,"Motor vehicle rental, leasing, and other",431
+127,Q1MHO10,1976:2 - 2005:6,5,"Bridge, tunnel, ferry, and road tolls",432
+128,Q1ARP10,1976:2 - 2005:6,5,Insurance,433
+129,Q1RLO10,1976:2 - 2005:6,5,Mass transit systems,434
+130,Q1TOL10,1976:2 - 2005:6,5,Taxicab,435
+131,Q1AIN10,1976:2 - 2005:6,5,Railway,436
+132,Q1IMT10,1976:2 - 2005:6,5,Bus,437
+133,Q1TAX10,1976:2 - 2005:6,5,Airline,438
+134,Q1IRR10,1976:2 - 2005:6,5,Other,439
+135,Q1IBU10,1976:2 - 2005:6,5,Physicians,440
+136,Q1IAI10,1976:2 - 2005:6,5,Dentists,441
+137,Q1TRO10,1976:2 - 2005:6,5,Other professional services,442
+138,Q1PHY10,1976:2 - 2005:6,5,Nonprofit,443
+139,Q1DEN10,1976:2 - 2005:6,5,Proprietary,444
+140,Q1OPS10,1976:2 - 2005:6,5,Government,445
+141,Q1NPH10,1976:2 - 2005:6,5,Nursing homes,446
+142,Q1FPH10,1976:2 - 2005:6,5,Medical care and hospitalization,447
+143,Q1GVH10,1976:2 - 2005:6,5,Income loss,448
+144,Q1NRS10,1976:2 - 2005:6,5,Workers' compensation,449
+145,Q1MIN10,1976:2 - 2005:6,5,Motion picture theaters,450
+146,Q1IIN10,1976:2 - 2005:6,5,"Legitimate theaters and opera, and entertainments of nonprofit institutions (except athletics)",451
+147,Q1PWC10,1976:2 - 2005:6,5,Spectator sports,452
+148,Q1MOV10,1976:2 - 2005:6,5,Radio and television repair,453
+149,Q1LEG10,1976:2 - 2005:6,5,Clubs and fraternal organizations,454
+150,Q1SPE10,1976:2 - 2005:6,5,Sightseeing,455
+151,Q1RTV10,1976:2 - 2005:6,5,Private flying,456
+152,Q1CLU10,1976:2 - 2005:6,5,Bowling and billiards,457
+153,Q1SIG10,1976:2 - 2005:6,5,Casino gambling,458
+154,Q1FLY10,1976:2 - 2005:6,5,Other comml participant amusements,459
+155,Q1BIL10,1976:2 - 2005:6,5,Pari-mutuel net receipts,460
+156,Q1CAS10,1976:2 - 2005:6,5,Other,461
+157,Q1OPA10,1976:2 - 2005:6,5,Shoe repair,462
+158,Q1PAR10,1976:2 - 2005:6,5,Drycleaning,463
+159,Q1REO10,1976:2 - 2005:6,5,Laundry and garment repair,464
+160,Q1SCL10,1976:2 - 2005:6,5,"Beauty shops, including combination",465
+161,Q1DRY10,1976:2 - 2005:6,5,Barber shops,466
+162,Q1LGR10,1976:2 - 2005:6,5,"Watch, clock, and jewelry repair",467
+163,Q1BEA10,1976:2 - 2005:6,5,Miscellaneous personal services,468
+164,Q1BAR10,1976:2 - 2005:6,5,Brokerage charges and investment counseling,469
+165,Q1WCR10,1976:2 - 2005:6,5,"Bank service charges, trust services, and safe deposit box rental",470
+166,Q1CRP10,1976:2 - 2005:6,5,Commercial banks,471
+167,Q1BRO10,1976:2 - 2005:6,5,Other financial institutions,472
+168,Q1BNK10,1976:2 - 2005:6,5,Expense of handling life insurance and pension plans,473
+169,Q1IMC10,1976:2 - 2005:6,5,Legal services,474
+170,Q1IMN10,1976:2 - 2005:6,5,Funeral and burial expenses,475
+171,Q1LIF10,1976:2 - 2005:6,5,Labor union expenses,476
+172,Q1GAL10,1976:2 - 2005:6,5,Profession association expenses,477
+173,Q1FUN10,1976:2 - 2005:6,5,Employment agency fees,478
+174,Q1UNS10,1976:2 - 2005:6,5,Money orders,479
+175,Q1ASS10,1976:2 - 2005:6,5,Classified ads,480
+176,Q1GEN10,1976:2 - 2005:6,5,Tax return preparation services,481
+177,Q1AMO10,1976:2 - 2005:6,5,"Personal business services, n.e.c.",482
+178,Q1CLA10,1976:2 - 2005:6,5,Private higher education,483
+179,Q1ACC10,1976:2 - 2005:6,5,Public higher education,484
+180,Q1THE10,1976:2 - 2005:6,5,Elementary and secondary schools,485
+181,Q1PED10,1976:2 - 2005:6,5,Nursery schools,486
+182,Q1GED10,1976:2 - 2005:6,5,Commercial and vocational schools,487
+183,Q1ESC10,1976:2 - 2005:6,5,Foundations and nonprofit research,488
+184,Q1NSC10,1976:2 - 2005:6,5,Political organizations,489
+185,Q1VED10,1976:2 - 2005:6,5,Museums and libraries,490
+186,Q1RED10,1976:2 - 2005:6,5,Foundations to religion and welfare,491
+187,Q1POL10,1976:2 - 2005:6,5,Social welfare,492
+188,Q1MUS10,1976:2 - 2005:6,5,Religion,493
+189,Q1FOU10,1976:2 - 2005:6,5,Foreign travel by U.S. residents,494
+190,Q1WEL10,1976:2 - 2005:6,5,Less: Expenditures in the United States by nonresidents,495
+191,Q1REL10,1976:2 - 2005:6,5,Durable goods,496
+192,Q1FTR10,1976:2 - 2005:6,5,Nondurable goods,497
+193,Q1EXF10,1976:2 - 2005:6,5,Services,498
+194,QPCE,1976:2 - 2005:6,5,Personal Consumption Expenditures (all items),499

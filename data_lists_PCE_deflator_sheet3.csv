@@ -1,0 +1,195 @@
+﻿,Name,Sample,Transformation,Description,# in Data76.m
+1,P1NDCG3,1976:2 - 2005:6,5,New domestic autos,112
+2,P1NFCG3,1976:2 - 2005:6,5,New foreign autos,113
+3,P1NETG3,1976:2 - 2005:6,5,Net transactions in used autos,114
+4,P1MARG3,1976:2 - 2005:6,5,Used auto margin,115
+5,P1REEG3,1976:2 - 2005:6,5,Employee reimbursement,116
+6,P1TRUG3,1976:2 - 2005:6,5,"Trucks, new and net used",117
+7,P1REVG3,1976:2 - 2005:6,5,Recreational vehicles,118
+8,P1TATG3,1976:2 - 2005:6,5,Tires and tubes,119
+9,P1PAAG3,1976:2 - 2005:6,5,Accessories and parts,120
+10,P1FNRG3,1976:2 - 2005:6,5,"Furniture, including mattresses and bedsprings",121
+11,P1MHAG3,1976:2 - 2005:6,5,Major household appliances,122
+12,P1SEAG3,1976:2 - 2005:6,5,Small electric appliances,123
+13,P1CHNG3,1976:2 - 2005:6,5,"China, glassware, tableware, and utensils",124
+14,P1RADG3,1976:2 - 2005:6,5,"Video and audio goods, including musical instruments, and computer goods",125
+15,P1FLRG3,1976:2 - 2005:6,5,Floor coverings,126
+16,P1CLFG3,1976:2 - 2005:6,5,"Clocks, lamps, and furnishings",127
+17,P1TEXG3,1976:2 - 2005:6,5,"Blinds, rods, and other",128
+18,P1WTRG3,1976:2 - 2005:6,5,Writing equipment,129
+19,P1HDWG3,1976:2 - 2005:6,5,"Tools, hardware, and supplies",130
+20,P1LWNG3,1976:2 - 2005:6,5,Outdoor eqpt and supplies,131
+21,P1OPTG3,1976:2 - 2005:6,5,Ophthalmic products and orthopedic appliances,132
+22,P1GUNG3,1976:2 - 2005:6,5,Guns,133
+23,P1SPTG3,1976:2 - 2005:6,5,Sporting equipment,134
+24,P1CAMG3,1976:2 - 2005:6,5,Photographic equipment,135
+25,P1BCYG3,1976:2 - 2005:6,5,Bicycles,136
+26,P1MCYG3,1976:2 - 2005:6,5,Motorcycles,137
+27,P1BOAG3,1976:2 - 2005:6,5,Pleasure boats,138
+28,P1AIRG3,1976:2 - 2005:6,5,Pleasure aircraft,139
+29,P1JRYG3,1976:2 - 2005:6,5,Jewelry and watches,140
+30,P1BKSG3,1976:2 - 2005:6,5,Books and maps,141
+31,P1GRAG3,1976:2 - 2005:6,5,Cereals,142
+32,P1BAKG3,1976:2 - 2005:6,5,Bakery products,143
+33,P1BEEG3,1976:2 - 2005:6,5,Beef and veal,144
+34,P1PORG3,1976:2 - 2005:6,5,Pork,145
+35,P1MEAG3,1976:2 - 2005:6,5,Other meats,146
+36,P1POUG3,1976:2 - 2005:6,5,Poultry,147
+37,P1FISG3,1976:2 - 2005:6,5,Fish and seafood,148
+38,P1GGSG3,1976:2 - 2005:6,5,Eggs,149
+39,P1MILG3,1976:2 - 2005:6,5,Fresh milk and cream,150
+40,P1DAIG3,1976:2 - 2005:6,5,Processed dairy products,151
+41,P1FRUG3,1976:2 - 2005:6,5,Fresh fruits,152
+42,P1VEGG3,1976:2 - 2005:6,5,Fresh vegetables,153
+43,P1PFVG3,1976:2 - 2005:6,5,Processed fruits and vegetables,154
+44,P1JNBG3,1976:2 - 2005:6,5,Juices and nonalcoholic drinks,155
+45,P1CTMG3,1976:2 - 2005:6,5,"Coffee, tea and beverage materials",156
+46,P1FATG3,1976:2 - 2005:6,5,Fats and oils,157
+47,P1SWEG3,1976:2 - 2005:6,5,Sugar and sweets,158
+48,P1OFDG3,1976:2 - 2005:6,5,Other foods,159
+49,P1PEFG3,1976:2 - 2005:6,5,Pet food,160
+50,P1MLTG3,1976:2 - 2005:6,5,"Beer and ale, at home",161
+51,P1WING3,1976:2 - 2005:6,5,"Wine and brandy, at home",162
+52,P1LIQG3,1976:2 - 2005:6,5,"Distilled spirits, at home",163
+53,P1ESLG3,1976:2 - 2005:6,5,Elementary and secondary school lunch,164
+54,P1HSLG3,1976:2 - 2005:6,5,Higher education school lunch,165
+55,P1OPMG3,1976:2 - 2005:6,5,Other purchased meals,166
+56,P1APMG3,1976:2 - 2005:6,5,Alcohol in purchased meals,167
+57,P1CFDG3,1976:2 - 2005:6,5,Food supplied civilians,168
+58,P1MFDG3,1976:2 - 2005:6,5,Food supplied military,169
+59,P1FFDG3,1976:2 - 2005:6,5,Food produced and consumed on farms,170
+60,P1SHUG3,1976:2 - 2005:6,5,Shoes (12),171
+61,P1WGCG3,1976:2 - 2005:6,5,Clothing for females,172
+62,P1WICG3,1976:2 - 2005:6,5,Clothing for infants,173
+63,P1WSGG3,1976:2 - 2005:6,5,Sewing goods for females,174
+64,P1WUGG3,1976:2 - 2005:6,5,Luggage for females,175
+65,P1MBCG3,1976:2 - 2005:6,5,Clothing for males,176
+66,P1MSGG3,1976:2 - 2005:6,5,Sewing goods for males,177
+67,P1MUGG3,1976:2 - 2005:6,5,Luggage for males,178
+68,P1MICG3,1976:2 - 2005:6,5,Standard clothing issued to military personnel (n.d.),179
+69,P1GASG3,1976:2 - 2005:6,5,Gasoline and other motor fuel,180
+70,P1LUBG3,1976:2 - 2005:6,5,Lubricants,181
+71,P1OILG3,1976:2 - 2005:6,5,Fuel oil,182
+72,P1LPGG3,1976:2 - 2005:6,5,Liquified petroleum gas and other fuel,183
+73,P1TOBG3,1976:2 - 2005:6,5,Tobacco products,184
+74,P1SOAG3,1976:2 - 2005:6,5,Soap,185
+75,P1CSMG3,1976:2 - 2005:6,5,Cosmetics and perfumes,186
+76,P1OPHG3,1976:2 - 2005:6,5,Other personal hygiene goods,187
+77,P1SDHG3,1976:2 - 2005:6,5,Semidurable house furnishings,188
+78,P1CLEG3,1976:2 - 2005:6,5,Cleaning preparations,189
+79,P1LIGG3,1976:2 - 2005:6,5,Lighting supplies,190
+80,P1PAPG3,1976:2 - 2005:6,5,Paper products,191
+81,P1RXDG3,1976:2 - 2005:6,5,Prescription drugs,192
+82,P1NRXG3,1976:2 - 2005:6,5,Nonprescription drugs,193
+83,P1MDSG3,1976:2 - 2005:6,5,Medical supplies,194
+84,P1GYNG3,1976:2 - 2005:6,5,Gynecological goods,195
+85,P1DOLG3,1976:2 - 2005:6,5,"Toys, dolls, and games",196
+86,P1AMMG3,1976:2 - 2005:6,5,"Sport supplies, including ammunition",197
+87,P1FLMG3,1976:2 - 2005:6,5,Film and photo supplies,198
+88,P1STSG3,1976:2 - 2005:6,5,Stationery and school supplies,199
+89,P1GREG3,1976:2 - 2005:6,5,Greeting cards,200
+90,P1ARTG3,1976:2 - 2005:6,5,Government expenditures abroad,201
+91,P1ARSG3,1976:2 - 2005:6,5,Other private services,202
+92,P1REMG3,1976:2 - 2005:6,5,Less: Personal remittances in kind to nonresidents,203
+93,P1MGZG3,1976:2 - 2005:6,5,Magazines and sheet music,204
+94,P1NWPG3,1976:2 - 2005:6,5,Newspapers,205
+95,P1FLOG3,1976:2 - 2005:6,5,"Flowers, seeds, and potted plants",206
+96,P1OMHG3,1976:2 - 2005:6,5,Owner occupied mobile homes,207
+97,P1OSTG3,1976:2 - 2005:6,5,Owner occupied stationary homes,208
+98,P1TMHG3,1976:2 - 2005:6,5,Tenant occupied mobile homes,209
+99,P1TSPG3,1976:2 - 2005:6,5,Tenant occupied stationary homes,210
+100,P1TLDG3,1976:2 - 2005:6,5,Tenant landlord durables,211
+101,P1FARG3,1976:2 - 2005:6,5,Rental value of farm dwellings,212
+102,P1HOTG3,1976:2 - 2005:6,5,Hotels and motels,213
+103,P1HFRG3,1976:2 - 2005:6,5,Clubs and fraternity housing,214
+104,P1HHEG3,1976:2 - 2005:6,5,Higher education housing,215
+105,P1HESG3,1976:2 - 2005:6,5,Elem and second education housing,216
+106,P1TGRG3,1976:2 - 2005:6,5,Tenant group room and board,217
+107,P1TGLG3,1976:2 - 2005:6,5,Tenant group employee lodging,218
+108,P1ELCG3,1976:2 - 2005:6,5,Electricity,219
+109,P1NGSG3,1976:2 - 2005:6,5,Gas,220
+110,P1WSMG3,1976:2 - 2005:6,5,Water and sewerage maintenance,221
+111,P1REFG3,1976:2 - 2005:6,5,Refuse collection,222
+112,P1LOCG3,1976:2 - 2005:6,5,Local and cellular telephone,223
+113,P1INCG3,1976:2 - 2005:6,5,Intrastate toll calls,224
+114,P1ITCG3,1976:2 - 2005:6,5,Interstate toll calls,225
+115,P1DMCG3,1976:2 - 2005:6,5,"Domestic service, cash",226
+116,P1DMIG3,1976:2 - 2005:6,5,"Domestic service, in kind",227
+117,P1MSEG3,1976:2 - 2005:6,5,Moving and storage,228
+118,P1FIPG3,1976:2 - 2005:6,5,Household insurance premiums,229
+119,P1FIBG3,1976:2 - 2005:6,5,Less: Household insurance benefits paid,230
+120,P1RCLG3,1976:2 - 2005:6,5,Rug and furniture cleaning,231
+121,P1EREG3,1976:2 - 2005:6,5,Electrical repair,232
+122,P1FREG3,1976:2 - 2005:6,5,Reupholstery and furniture repair,233
+123,P1PSTG3,1976:2 - 2005:6,5,Postage,234
+124,P1MHOG3,1976:2 - 2005:6,5,"Household operation services, n.e.c.",235
+125,P1ARPG3,1976:2 - 2005:6,5,Motor vehicle repair,236
+126,P1RLOG3,1976:2 - 2005:6,5,"Motor vehicle rental, leasing, and other",237
+127,P1TOLG3,1976:2 - 2005:6,5,"Bridge, tunnel, ferry, and road tolls",238
+128,P1AING3,1976:2 - 2005:6,5,Insurance,239
+129,P1IMTG3,1976:2 - 2005:6,5,Mass transit systems,240
+130,P1TAXG3,1976:2 - 2005:6,5,Taxicab,241
+131,P1IRRG3,1976:2 - 2005:6,5,Railway,242
+132,P1IBUG3,1976:2 - 2005:6,5,Bus,243
+133,P1IAIG3,1976:2 - 2005:6,5,Airline,244
+134,P1TROG3,1976:2 - 2005:6,5,Other,245
+135,P1PHYG3,1976:2 - 2005:6,5,Physicians,246
+136,P1DENG3,1976:2 - 2005:6,5,Dentists,247
+137,P1OPSG3,1976:2 - 2005:6,5,Other professional services,248
+138,P1NPHG3,1976:2 - 2005:6,5,Nonprofit,249
+139,P1FPHG3,1976:2 - 2005:6,5,Proprietary,250
+140,P1GVHG3,1976:2 - 2005:6,5,Government,251
+141,P1NRSG3,1976:2 - 2005:6,5,Nursing homes,252
+142,P1MING3,1976:2 - 2005:6,5,Medical care and hospitalization,253
+143,P1IING3,1976:2 - 2005:6,5,Income loss,254
+144,P1PWCG3,1976:2 - 2005:6,5,Workers' compensation,255
+145,P1MOVG3,1976:2 - 2005:6,5,Motion picture theaters,256
+146,P1LEGG3,1976:2 - 2005:6,5,"Legitimate theaters and opera, and entertainments of nonprofit institutions (except athletics)",257
+147,P1SPEG3,1976:2 - 2005:6,5,Spectator sports,258
+148,P1RTVG3,1976:2 - 2005:6,5,Radio and television repair,259
+149,P1CLUG3,1976:2 - 2005:6,5,Clubs and fraternal organizations,260
+150,P1SIGG3,1976:2 - 2005:6,5,Sightseeing,261
+151,P1FLYG3,1976:2 - 2005:6,5,Private flying,262
+152,P1BILG3,1976:2 - 2005:6,5,Bowling and billiards,263
+153,P1CASG3,1976:2 - 2005:6,5,Casino gambling,264
+154,P1OPAG3,1976:2 - 2005:6,5,Other comml participant amusements,265
+155,P1PARG3,1976:2 - 2005:6,5,Pari-mutuel net receipts,266
+156,P1REOG3,1976:2 - 2005:6,5,Other,267
+157,P1SCLG3,1976:2 - 2005:6,5,Shoe repair,268
+158,P1DRYG3,1976:2 - 2005:6,5,Drycleaning,269
+159,P1LGRG3,1976:2 - 2005:6,5,Laundry and garment repair,270
+160,P1BEAG3,1976:2 - 2005:6,5,"Beauty shops, including combination",271
+161,P1BARG3,1976:2 - 2005:6,5,Barber shops,272
+162,P1WCRG3,1976:2 - 2005:6,5,"Watch, clock, and jewelry repair",273
+163,P1CRPG3,1976:2 - 2005:6,5,Miscellaneous personal services,274
+164,P1BROG3,1976:2 - 2005:6,5,Brokerage charges and investment counseling,275
+165,P1BNKG3,1976:2 - 2005:6,5,"Bank service charges, trust services, and safe deposit box rental",276
+166,P1IMCG3,1976:2 - 2005:6,5,Commercial banks,277
+167,P1IMNG3,1976:2 - 2005:6,5,Other financial institutions,278
+168,P1LIFG3,1976:2 - 2005:6,5,Expense of handling life insurance and pension plans,279
+169,P1GALG3,1976:2 - 2005:6,5,Legal services,280
+170,P1FUNG3,1976:2 - 2005:6,5,Funeral and burial expenses,281
+171,P1UNSG3,1976:2 - 2005:6,5,Labor union expenses,282
+172,P1ASSG3,1976:2 - 2005:6,5,Profession association expenses,283
+173,P1GENG3,1976:2 - 2005:6,5,Employment agency fees,284
+174,P1AMOG3,1976:2 - 2005:6,5,Money orders,285
+175,P1CLAG3,1976:2 - 2005:6,5,Classified ads,286
+176,P1ACCG3,1976:2 - 2005:6,5,Tax return preparation services,287
+177,P1THEG3,1976:2 - 2005:6,5,"Personal business services, n.e.c.",288
+178,P1PEDG3,1976:2 - 2005:6,5,Private higher education,289
+179,P1GEDG3,1976:2 - 2005:6,5,Public higher education,290
+180,P1ESCG3,1976:2 - 2005:6,5,Elementary and secondary schools,291
+181,P1NSCG3,1976:2 - 2005:6,5,Nursery schools,292
+182,P1VEDG3,1976:2 - 2005:6,5,Commercial and vocational schools,293
+183,P1REDG3,1976:2 - 2005:6,5,Foundations and nonprofit research,294
+184,P1POLG3,1976:2 - 2005:6,5,Political organizations,295
+185,P1MUSG3,1976:2 - 2005:6,5,Museums and libraries,296
+186,P1FOUG3,1976:2 - 2005:6,5,Foundations to religion and welfare,297
+187,P1WELG3,1976:2 - 2005:6,5,Social welfare,298
+188,P1RELG3,1976:2 - 2005:6,5,Religion,299
+189,P1FTRG3,1976:2 - 2005:6,5,Foreign travel by U.S. residents,300
+190,P1EXFG3,1976:2 - 2005:6,5,Less: Expenditures in the United States by nonresidents,301
+191,P1TDGG3,1976:2 - 2005:6,5,Durable goods,302
+192,P1TNDG3,1976:2 - 2005:6,5,Nondurable goods,303
+193,P1TSSG3,1976:2 - 2005:6,5,Services,304
+194,PPCE,1976:2 - 2005:6,5,Personal Consumption Expenditures (all items),305

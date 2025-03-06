@@ -1,0 +1,195 @@
+﻿,Name,Sample,Transformation,Description,# in Data76.m
+1,311119,1976:2 - 2005:6,5, Other animal food manufacturing,500
+2,311119p,1976:2 - 2005:6,5, Other animal food manufacturing (primary products),501
+3,311211,1976:2 - 2005:6,5, Flour Milling,502
+4,311212,1976:2 - 2005:6,5, Rice milling,503
+5,311213,1976:2 - 2005:6,5, Malt mfg,504
+6,311223a,1976:2 - 2005:6,5, Other oilseed processing (Cottonseed cake and meal and other byproducts),505
+7,311225p,1976:2 - 2005:6,5, Fats and oils refining and blending (Primary products),506
+8,311311,1976:2 - 2005:6,5, Sugarcane mills,507
+9,311313,1976:2 - 2005:6,5, Beet sugar manufacturing,508
+10,311412,1976:2 - 2005:6,5, Frozen specialty food manufacturing,509
+11,311520,1976:2 - 2005:6,5, Ice cream and frozen dessert mfg,510
+12,311920,1976:2 - 2005:6,5, Coffee and tea manufacturing,511
+13,312140,1976:2 - 2005:6,5, Distilleries,512
+14,32211-,1976:2 - 2005:6,5, Pulp mills,513
+15,32213-,1976:2 - 2005:6,5, Paperboard mills,514
+16,325620p,1976:2 - 2005:6,5, Toilet preparation mfg (Primary products),515
+17,325920,1976:2 - 2005:6,5, Explosives manufacturing,516
+18,32731-,1976:2 - 2005:6,5, Cement mfg,517
+19,327320,1976:2 - 2005:6,5, Ready mixed concrete mfg and dist,518
+20,327410,1976:2 - 2005:6,5, Lime,519
+21,327420,1976:2 - 2005:6,5, Gypsum building products manufacturing,520
+22,327910,1976:2 - 2005:6,5, Abrasive product manufacturing,521
+23,331210,1976:2 - 2005:6,5, Iron steel pipe & tube mfg from purch steel,522
+24,333210,1976:2 - 2005:6,5, Sawmill & woodworking machinery mfg,523
+25,334310,1976:2 - 2005:6,5, Audio & video equipment mfg,524
+26,335110,1976:2 - 2005:6,5, Electric lamp bulb & part mfg,525
+27,336370,1976:2 - 2005:6,5, Motor vehicle metal stamping,526
+28,337910,1976:2 - 2005:6,5, Mattress mfg,527
+29,311421,1976:2 - 2005:6,5, Fruit and vegetable canning,528
+30,311423,1976:2 - 2005:6,5, Dried and dehydrated food manufacturing,529
+31,311513,1976:2 - 2005:6,5, Cheese manufacturing,530
+32,311611,1976:2 - 2005:6,5, Animal except poultry slaughtering,531
+33,311612,1976:2 - 2005:6,5, Meat processed from carcasses,532
+34,311613,1976:2 - 2005:6,5, Rendering and meat byproduct processing,533
+35,311711,1976:2 - 2005:6,5, Seafood canning,534
+36,311712,1976:2 - 2005:6,5, Fresh & frozen seafood processing,535
+37,311813p,1976:2 - 2005:6,5, Frozen cakes pies & other pastries mfg (Primary products),536
+38,3118233,1976:2 - 2005:6,5, Dry pasta manufacturing ( Macaroni  spaghetti  vermicelli  and noodles),537
+39,312111p,1976:2 - 2005:6,5, Soft drinks manufacturing (Primary products),538
+40,312221,1976:2 - 2005:6,5, Cigarettes,539
+41,3122291,1976:2 - 2005:6,5, Other tobacco product mfg (Cigars),540
+42,313111,1976:2 - 2005:6,5, Yarn spinning mills,541
+43,3133111,1976:2 - 2005:6,5, Broadwoven fabric finishing mills ( Finished cotton broadwoven fabrics  not finished in weaving mills),542
+44,315111,1976:2 - 2005:6,5, Sheer hosiery mills,543
+45,315191,1976:2 - 2005:6,5, Outerwear knitting mills,544
+46,315223,1976:2 - 2005:6,5, Men's boy's cut & sew shirt  exc work  mfg,545
+47,315224,1976:2 - 2005:6,5, Men's boy's cut & sew trouser slack jean mfg,546
+48,315993,1976:2 - 2005:6,5, Men's and boys' neckwear mfg,547
+49,316211,1976:2 - 2005:6,5, Rubber and plastic footwear manufacturing,548
+50,316213,1976:2 - 2005:6,5, Men's footwear  exc athletic  mfg,549
+51,316214,1976:2 - 2005:6,5, Women's footwear  exc athletic  mfg,550
+52,316992,1976:2 - 2005:6,5, Women's handbag & purse mfg,551
+53,321212,1976:2 - 2005:6,5, Softwood veneer or plywood  mfg,552
+54,3212191,1976:2 - 2005:6,5, Reconstituted wood product mfg ( Particleboard  produced at this location),553
+55,3219181,1976:2 - 2005:6,5, Other millwork  including flooring ( Wood moldings  except prefinished moldings made from purchased moldings),554
+56,321991,1976:2 - 2005:6,5, Manufactured homes  mobile homes  mfg,555
+57,3221211,1976:2 - 2005:6,5, Paper  except newsprint  mills ( Clay coated printing and converting paper),556
+58,322214,1976:2 - 2005:6,5, Fiber can  tube  drum & oth products mfg,557
+59,324121,1976:2 - 2005:6,5, Asphalt paving mixture & block mfg,558
+60,324122,1976:2 - 2005:6,5, Asphalt shingle & coating materials mfg,559
+61,324191p,1976:2 - 2005:6,5, Petroleum lubricating oils and greases ( Primary products),560
+62,325181,1976:2 - 2005:6,5, Alkalies and chlorine,561
+63,3251881,1976:2 - 2005:6,5, All other basic inorganic chemical manufacturing ( Sulfuric acid  gross  new and fortified),562
+64,3251921,1976:2 - 2005:6,5, Cyclic crude and intermediate manufacturing ( Cyclic  coal tar  intermediates),563
+65,325212,1976:2 - 2005:6,5, Synthetic rubber manufacturing,564
+66,325222,1976:2 - 2005:6,5, Manufactured noncellulosic fibers,565
+67,325314,1976:2 - 2005:6,5, Fertilizer  mixing only  manufacturing,566
+68,3254111,1976:2 - 2005:6,5, Medicinal & botanical mfg ( Synthetic organic medicinal chemicals  in bulk),567
+69,3261131,1976:2 - 2005:6,5, Unsupported plastics film sheet  excluding packaging  manufacturing ( Unsupported plastics film and sheet),568
+70,326192,1976:2 - 2005:6,5, Resilient floor covering manufacturing,569
+71,326211,1976:2 - 2005:6,5, Tire manufacturing  except retreading,570
+72,327111,1976:2 - 2005:6,5, Vitreous plumbing fixtures access ftg mfg,571
+73,327121,1976:2 - 2005:6,5, Brick and structural clay tile,572
+74,327122,1976:2 - 2005:6,5, Ceramic wall and floor tile,573
+75,327124,1976:2 - 2005:6,5, Clay refractories,574
+76,327125,1976:2 - 2005:6,5, Nonclay Refractory Manufacturing,575
+77,327211,1976:2 - 2005:6,5, Flat glass manufacturing,576
+78,327213,1976:2 - 2005:6,5, Glass container manufacturing,577
+79,327331,1976:2 - 2005:6,5, Concrete block and brick manufacturing,578
+80,3279931,1976:2 - 2005:6,5, Mineral wool manufacturing,579
+81,331111,1976:2 - 2005:6,5, Iron and steel mills,580
+82,331112,1976:2 - 2005:6,5, Electrometallurgical ferroalloy product mfg,581
+83,331221,1976:2 - 2005:6,5, Rolled steel shape manufacturing,582
+84,331312,1976:2 - 2005:6,5, Primary aluminum production,583
+85,331315,1976:2 - 2005:6,5, Aluminum sheet  plate & foil mfg,584
+86,331316,1976:2 - 2005:6,5, Aluminum extruded products,585
+87,331421,1976:2 - 2005:6,5, Copper rolling  drawing & extruding,586
+88,3314913,1976:2 - 2005:6,5, Other nonferrous metal roll draw extruding ( Titanium and titanium base alloy mill shapes  excluding wire),587
+89,3314923,1976:2 - 2005:6,5, Other nonferrous secondary smelt refine alloying (Secondary lead),588
+90,331511,1976:2 - 2005:6,5, Iron foundries,589
+91,3322121,1976:2 - 2005:6,5, Hand and edge tools  except machine tools and handsaws ( Mechanics' hand service tools),590
+92,332213,1976:2 - 2005:6,5, Saw blade & handsaw mfg,591
+93,3323111,1976:2 - 2005:6,5, Prefabricated metal building and component manufacturing ( Prefabricated metal building systems  excluding farm service bldgs  & residential buildings),592
+94,332321,1976:2 - 2005:6,5, Metal window and door manufacturing,593
+95,332431,1976:2 - 2005:6,5, Metal can mfg,594
+96,324393,1976:2 - 2005:6,5, Other metal container manufacturing ( Steel shipping barrels & drums  exc  beer barrels  more than 12 gallon capacity),595
+97,332611,1976:2 - 2005:6,5, Spring  heavy gauge  mfg,596
+98,3326122,1976:2 - 2005:6,5, Spring  light gauge  mfg ( Precision mechanical springs),597
+99,3327224,1976:2 - 2005:6,5, Bolt  nut  screw  rivet & washer mfg ( Externally threaded metal fasteners  except aircraft),598
+100,332913,1976:2 - 2005:6,5, Plumbing fixture fitting & trim mfg,599
+101,332991,1976:2 - 2005:6,5, Ball and roller bearings,600
+102,332992,1976:2 - 2005:6,5, Small arms ammunition mfg,601
+103,332996,1976:2 - 2005:6,5, Fabricated pipe & pipe fitting mfg,602
+104,332998,1976:2 - 2005:6,5, Enameled iron & metal sanitary ware mfg,603
+105,333111,1976:2 - 2005:6,5, Farm machinery & equipment mfg,604
+106,333131,1976:2 - 2005:6,5, Mining machinery & equipment mfg,605
+107,333132,1976:2 - 2005:6,5, Oil and gas field machinery and equipment mfg,606
+108,333292,1976:2 - 2005:6,5, Textile machinery,607
+109,333293,1976:2 - 2005:6,5, Printing machinery & equipment mfg,608
+110,3332941,1976:2 - 2005:6,5, Food products machinery mfg ( Dairy and milk products plant machinery),609
+111,3332981,1976:2 - 2005:6,5, All other industrial machinery mfg ( Chemical manufacturing machinery  equipment  and parts),610
+112,3333111,1976:2 - 2005:6,5, Automatic vending machine mfg ( Automatic merchandising machines  coin operated  excluding parts),611
+113,333512,1976:2 - 2005:6,5, Machine tool  metal cutting types  mfg,612
+114,333513,1976:2 - 2005:6,5, Machine tool  metal forming types  mfg,613
+115,3335151,1976:2 - 2005:6,5, Cutting tool & machine tool accessory mfg ( Small cutting tools for machine tools and metalworking machinery),614
+116,333612,1976:2 - 2005:6,5, Speed changer  industrial high speed drive  & gear mfg,615
+117,333618,1976:2 - 2005:6,5, Other engine equipment mfg,616
+118,3339111,1976:2 - 2005:6,5, Pump & pumping equipment mfg ( Industrial pumps  except hydraulic fluid power pumps),617
+119,333922,1976:2 - 2005:6,5, Conveyor & conveying equipment mfg,618
+120,3339233,1976:2 - 2005:6,5, Overhead crane  hoist & monorail system mfg ( Overhead traveling cranes and monorail systems),619
+121,3339241,1976:2 - 2005:6,5, Industrial truck  tractor  trailer  stacker machinery mfg ( Industrial trucks and tractors  motorized and hand powered),620
+122,333992,1976:2 - 2005:6,5, Welding & soldering equipment mfg  (Welding & soldering equipment mfg),621
+123,333997,1976:2 - 2005:6,5, Scale & balance  except laboratory  mfg,622
+124,334411,1976:2 - 2005:6,5, Electron tube mfg,623
+125,334414,1976:2 - 2005:6,5, Electronic capacitor mfg,624
+126,334415,1976:2 - 2005:6,5, Electronic resistor mfg,625
+127,334417,1976:2 - 2005:6,5, Electronic connector mfg,626
+128,3345153,1976:2 - 2005:6,5, Electricity measuring testing instrument mfg ( Test equipment for testing electrical  radio & communication circuits & motors),627
+129,334517p,1976:2 - 2005:6,5, Irradiation apparatus manufacturing ( Primary products),628
+130,3351211,1976:2 - 2005:6,5, Residential electric lighting fixture mfg ( Residential electric lighting fixtures  except portable  & parts),629
+131,335122,1976:2 - 2005:6,5, Commercial electric lighting fixture mfg,630
+132,335129,1976:2 - 2005:6,5, Other lighting equipment mfg,631
+133,335212,1976:2 - 2005:6,5, Household vacuum cleaner mfg,632
+134,335221,1976:2 - 2005:6,5, Household cooking appliance mfg,633
+135,335311,1976:2 - 2005:6,5, Power distribution specialty transformer mfg,634
+136,335312,1976:2 - 2005:6,5, Motor & generator mfg,635
+137,335314p,1976:2 - 2005:6,5, Relay & industrial control mfg ( Primary products),636
+138,335911,1976:2 - 2005:6,5, Storage battery mfg,637
+139,3359291,1976:2 - 2005:6,5, Other communication and energy wire mfg ( Power wire and cable  made in plants that draw wire),638
+140,335932,1976:2 - 2005:6,5, Noncurrent carrying wiring device mfg,639
+141,335991p,1976:2 - 2005:6,5, Carbon & graphite product mfg ( Primary products),640
+142,336321p,1976:2 - 2005:6,5, Vehicular lighting equipment mfg ( Primary products),641
+143,337121,1976:2 - 2005:6,5, Upholstered household furniture mfg,642
+144,337122,1976:2 - 2005:6,5, Wood household furniture  except upholstered,643
+145,337124,1976:2 - 2005:6,5, Metal household furniture,644
+146,337211,1976:2 - 2005:6,5, Wood office furniture mfg,645
+147,3372141,1976:2 - 2005:6,5, Nonwood office furniture ( Office seating  including upholstered  nonwood),646
+148,3399111,1976:2 - 2005:6,5, Jewelry  except costume  mfg ( Jewelry made of solid platinum metals and solid karat gold),647
+149,3399123,1976:2 - 2005:6,5, Silverware & hollowware mfg ( Flatware and carving sets made wholly of metal),648
+150,339931,1976:2 - 2005:6,5, Doll & stuffed toy mfg,649
+151,339932,1976:2 - 2005:6,5, Game  toy  & children's vehicle mfg,650
+152,339944,1976:2 - 2005:6,5, Carbon paper & inked ribbon mfg,651
+153,3399931,1976:2 - 2005:6,5, Fastener  button  needle  & pin mfg ( Buttons and parts  except for precious or semiprecious metals and stones),652
+154,3399945,1976:2 - 2005:6,5, Broom  brush  & mop mfg ( Other brushes),653
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
