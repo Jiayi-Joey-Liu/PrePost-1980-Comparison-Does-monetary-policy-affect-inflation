@@ -1,0 +1,1951 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      -->
+<title>Team42_Project</title>
+<meta name="generator" content="MATLAB 24.2">
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+<meta name="DC.date" content="2025-03-02">
+<meta name="DC.source" content="Team42_Project.m">
+<style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style>
+</head>
+<body>
+<div class="content">
+<h2>Contents</h2>
+<div>
+<ul>
+<li>
+<a href="#2">Descriptive Analysis</a>
+</li>
+<li>
+<a href="#3"><b>*1. Time Series Plot</b>*</a>
+</li>
+<li>
+<a href="#4"><b>*2. Seasonal Decomposition Alternative</b>*</a>
+</li>
+<li>
+<a href="#5"><b>*3. Correlation Analysis</b>*</a>
+</li>
+<li>
+<a href="#6"><b>*4. Regression Analysis</b>*</a>
+</li>
+<li>
+<a href="#7"><b>*2SLS Estimation (Instrumental Variables Regression)</b>*</a>
+</li>
+<li>
+<a href="#8"><b>*3SLS Estimation for PCE and PPI Relationship</b>*</a>
+</li>
+<li>
+<a href="#9"><b>*Impulse Response Function (IRF) Analysis</b>*</a>
+</li>
+<li>
+<a href="#10"><b>*Variance Decomposition Analysis</b>*</a>
+</li>
+<li>
+<a href="#11">Pre/Post-1980 Analysis (Difference-in-Means Test)</a>
+</li>
+<li>
+<a href="#12">Pre/Post-1980 Analysis RD Estimation (Local Linear Regression)</a>
+</li>
+<li>
+<a href="#13">Pre/Post-1980 Analysis Placebo Test: 1978 &amp; 1982</a>
+</li>
+<li>
+<a href="#14">Pre/Post-1980 Analysis Bandwidth Sensitivity Test</a>
+</li>
+<li>
+<a href="#15">RD on industry level_B industry--- time series analysis</a>
+</li>
+<li>
+<a href="#16">RD on industry level_B industry</a>
+</li>
+<li>
+<a href="#17">2SLS Implementation (Using Interest Rate Spread as Policy Shock)</a>
+</li>
+<li>
+<a href="#18">Implementing Alternative IVs in 2SLS</a>
+</li>
+<li>
+<a href="#19">Robustness Test</a>
+</li>
+</ul>
+</div>
+<pre class="codeinput"><span class="comment">% =============================</span>
+<span class="comment">% Team42_Project.m</span>
+<span class="comment">% Team members: Jiayi(Joey) Liu, Yujin(Kim) Zhang, Hongyi(Clark) Zhong,</span>
+<span class="comment">%               Syed Irtiza Medhi, Demir Degirmenci</span>
+<span class="comment">% =============================</span>
+</pre>
+<h2 id="2">Descriptive Analysis</h2>
+<p>Load data</p>
+<pre class="codeinput">load(<span class="string">'data76.mat'</span>); <span class="comment">% Ensure data76.mat contains all required variables</span>
+
+<span class="comment">% Define save path for figures</span>
+save_path = <span class="string">'D:\OneDrive\桌面\Empirical economic analysis\Final project\Figures\'</span>;
+
+<span class="comment">% Define variable indices</span>
+PMI_index = 60;
+PPI_indices = 500:653;
+PCE_deflator_indices = 112:305;
+PCE_quantities_indices = 306:499;
+
+<span class="comment">% Extract data</span>
+PMI = data76(:, PMI_index);
+PPI = data76(:, PPI_indices);
+PCE_deflator = data76(:, PCE_deflator_indices);
+PCE_quantities = data76(:, PCE_quantities_indices);
+
+<span class="comment">% Compute weighted PCE deflator and weighted PCE quantities</span>
+weights_adjusted = [weights; zeros(4,1)]; <span class="comment">% Adjust weights for matrix multiplication</span>
+weighted_PCE_deflator = PCE_deflator * weights_adjusted;
+weighted_PCE_quantities = PCE_quantities * weights_adjusted;
+
+<span class="comment">% Define time vector (Monthly data from 1976-02 to 2005-06)</span>
+time_vector = datetime(1976,2,1) : calmonths(1) : datetime(2005,6,1);
+</pre>
+<h2 id="3">
+<b>*1. Time Series Plot</b>*</h2>
+<pre class="codeinput">figure;
+subplot(3,1,1);
+plot(time_vector, weighted_PCE_deflator, <span class="string">'b'</span>, <span class="string">'LineWidth'</span>, 1.5);
+title(<span class="string">'Weighted PCE Deflator Over Time'</span>);
+xlabel(<span class="string">'Time'</span>);
+ylabel(<span class="string">'Deflator Index'</span>);
+xtickformat(<span class="string">'yyyy-MM'</span>); <span class="comment">% Format x-axis labels as Year-Month</span>
+xticks(time_vector(1:24:end)); <span class="comment">% Show ticks every 2 years</span>
+
+subplot(3,1,2);
+plot(time_vector, weighted_PCE_quantities, <span class="string">'r'</span>, <span class="string">'LineWidth'</span>, 1.5);
+title(<span class="string">'Weighted PCE Quantities Over Time'</span>);
+xlabel(<span class="string">'Time'</span>);
+ylabel(<span class="string">'Quantities'</span>);
+xtickformat(<span class="string">'yyyy-MM'</span>);
+xticks(time_vector(1:24:end));
+
+subplot(3,1,3);
+plot(time_vector, PMI, <span class="string">'g'</span>, <span class="string">'LineWidth'</span>, 1.5);
+hold <span class="string">on</span>;
+plot(time_vector, mean(PPI, 2), <span class="string">'k'</span>, <span class="string">'LineWidth'</span>, 1.5);
+title(<span class="string">'PMI and Average PPI Over Time'</span>);
+xlabel(<span class="string">'Time'</span>);
+ylabel(<span class="string">'Index'</span>);
+legend(<span class="string">'PMI'</span>, <span class="string">'Average PPI'</span>);
+xtickformat(<span class="string">'yyyy-MM'</span>);
+xticks(time_vector(1:24:end));
+
+<span class="comment">% Save figure</span>
+saveas(gcf, fullfile(save_path, <span class="string">'time_series_plot.png'</span>));
+</pre>
+<img vspace="5" hspace="5" src="Team42_Project_01.png" alt=""> <h2 id="4">
+<b>*2. Seasonal Decomposition Alternative</b>*</h2>
+<p>Compute 12-month moving average as trend component</p>
+<pre class="codeinput">trend_PCE = movmean(weighted_PCE_deflator, 12);
+
+<span class="comment">% Compute seasonal component as the difference between actual and trend</span>
+seasonal_PCE = weighted_PCE_deflator - trend_PCE;
+
+<span class="comment">% Compute residual component as remaining fluctuations</span>
+residual_PCE = weighted_PCE_deflator - trend_PCE - mean(seasonal_PCE, <span class="string">'omitnan'</span>);
+
+<span class="comment">% Plot seasonal decomposition components</span>
+figure;
+subplot(3,1,1);
+plot(time_vector, trend_PCE, <span class="string">'b'</span>, <span class="string">'LineWidth'</span>, 1.5);
+title(<span class="string">'Trend Component'</span>);
+
+subplot(3,1,2);
+plot(time_vector, seasonal_PCE, <span class="string">'r'</span>, <span class="string">'LineWidth'</span>, 1.5);
+title(<span class="string">'Seasonal Component'</span>);
+
+subplot(3,1,3);
+plot(time_vector, residual_PCE, <span class="string">'k'</span>, <span class="string">'LineWidth'</span>, 1.5);
+title(<span class="string">'Residual Component'</span>);
+
+xtickformat(<span class="string">'yyyy-MM'</span>);
+xticks(time_vector(1:24:end));
+
+<span class="comment">% Save the figure</span>
+saveas(gcf, fullfile(save_path, <span class="string">'seasonal_decomposition_fixed.png'</span>));
+</pre>
+<img vspace="5" hspace="5" src="Team42_Project_02.png" alt=""> <h2 id="5">
+<b>*3. Correlation Analysis</b>*</h2>
+<p>Compute correlation between PMI and weighted PCE deflator</p>
+<pre class="codeinput">corr_PMI_PCE = corr(PMI, weighted_PCE_deflator, <span class="string">'Rows'</span>, <span class="string">'complete'</span>);
+<span class="comment">% Compute correlation between PPI (average) and weighted PCE deflator</span>
+corr_PPI_PCE = corr(mean(PPI, 2), weighted_PCE_deflator, <span class="string">'Rows'</span>, <span class="string">'complete'</span>);
+
+fprintf(<span class="string">'Correlation between PMI and Weighted PCE Deflator: %.4f\n'</span>, corr_PMI_PCE);
+fprintf(<span class="string">'Correlation between Average PPI and Weighted PCE Deflator: %.4f\n'</span>, corr_PPI_PCE);
+</pre>
+<pre class="codeoutput">Correlation between PMI and Weighted PCE Deflator: -0.0560
+Correlation between Average PPI and Weighted PCE Deflator: 0.5046
+</pre>
+<h2 id="6">
+<b>*4. Regression Analysis</b>*</h2>
+<p>Define independent variables (PMI and average PPI)</p>
+<pre class="codeinput">X = [PMI, mean(PPI, 2)];
+y = weighted_PCE_deflator; <span class="comment">% Define dependent variable</span>
+
+<span class="comment">% Add intercept term to X matrix</span>
+X = [ones(size(X,1),1), X];
+
+<span class="comment">% Perform linear regression</span>
+[b,~,~,~,stats] = regress(y, X);
+
+<span class="comment">% Display regression results</span>
+fprintf(<span class="string">'Regression Results:\n'</span>);
+fprintf(<span class="string">'Intercept: %.4f\n'</span>, b(1));
+fprintf(<span class="string">'PMI Coefficient: %.4f\n'</span>, b(2));
+fprintf(<span class="string">'Average PPI Coefficient: %.4f\n'</span>, b(3));
+fprintf(<span class="string">'R-squared: %.4f\n'</span>, stats(1));
+
+<span class="comment">% Save regression results as a text file</span>
+fileID = fopen(fullfile(save_path, <span class="string">'regression_results.txt'</span>), <span class="string">'w'</span>);
+fprintf(fileID, <span class="string">'Regression Results:\n'</span>);
+fprintf(fileID, <span class="string">'Intercept: %.4f\n'</span>, b(1));
+fprintf(fileID, <span class="string">'PMI Coefficient: %.4f\n'</span>, b(2));
+fprintf(fileID, <span class="string">'Average PPI Coefficient: %.4f\n'</span>, b(3));
+fprintf(fileID, <span class="string">'R-squared: %.4f\n'</span>, stats(1));
+fclose(fileID);
+</pre>
+<pre class="codeoutput">Regression Results:
+Intercept: 0.0067
+PMI Coefficient: -0.0001
+Average PPI Coefficient: 0.5196
+R-squared: 0.2886
+</pre>
+<h2 id="7">
+<b>*2SLS Estimation (Instrumental Variables Regression)</b>*</h2>
+<pre class="codeinput"><span class="comment">% Use the weighted PCE deflator instead of a single column</span>
+PCE = weighted_PCE_deflator;
+PPI = mean(data76(:, 500:653), 2); <span class="comment">% Average PPI (Corrected Index)</span>
+
+<span class="comment">% Corrected instrumental variables selection</span>
+IVs_PCE = data76(:, [85, 3]);  <span class="comment">% Money Supply &amp; Exchange Rate</span>
+IVs_PPI = data76(:, [54, 57]); <span class="comment">% Unemployment Rate &amp; Energy Prices</span>
+
+<span class="comment">% First-stage regression: Predict endogenous variables using IVs</span>
+PCE_hat = IVs_PCE * (IVs_PCE \ PCE); <span class="comment">% Project PCE on IVs</span>
+PPI_hat = IVs_PPI * (IVs_PPI \ PPI); <span class="comment">% Project PPI on IVs</span>
+
+<span class="comment">% Second-stage regression: Use predicted values in the main equation</span>
+b1 = (PCE_hat \ PPI); <span class="comment">% PCE -&gt; PPI</span>
+b2 = (PPI_hat \ PCE); <span class="comment">% PPI -&gt; PCE</span>
+
+<span class="comment">% Display results</span>
+fprintf(<span class="string">'Estimated 2SLS Coefficients:\n'</span>);
+fprintf(<span class="string">'PCE -&gt; PPI: %.4f\n'</span>, b1);
+fprintf(<span class="string">'PPI -&gt; PCE: %.4f\n'</span>, b2);
+
+<span class="comment">% Save results</span>
+save(<span class="string">'2SLS_results.mat'</span>, <span class="string">'b1'</span>, <span class="string">'b2'</span>);
+</pre>
+<pre class="codeoutput">Estimated 2SLS Coefficients:
+PCE -&gt; PPI: 1.1598
+PPI -&gt; PCE: 0.9916
+</pre>
+<h2 id="8">
+<b>*3SLS Estimation for PCE and PPI Relationship</b>*</h2>
+<pre class="codeinput"><span class="comment">% Define independent variables (Interest Rate &amp; Personal Income)</span>
+X_PCE = data76(:, [22, 36]); <span class="comment">% Interest Rate &amp; Personal Income</span>
+X_PPI = data76(:, [22, 36]); <span class="comment">% Interest Rate &amp; Personal Income</span>
+
+<span class="comment">% Stack equations into system</span>
+Y = [PPI; PCE];
+X = blkdiag(X_PPI, X_PCE);
+Z = blkdiag(IVs_PPI, IVs_PCE); <span class="comment">% Instrumental variables</span>
+
+<span class="comment">% First-stage projection</span>
+Z_transpose = Z';
+Pi = (Z_transpose * Z) \ (Z_transpose * X);
+X_hat = Z * Pi; <span class="comment">% Predicted values using IVs</span>
+
+<span class="comment">% Second-stage estimation using GLS</span>
+b_3SLS = (X_hat' * X_hat) \ (X_hat' * Y);
+
+<span class="comment">% Display results</span>
+fprintf(<span class="string">'\nEstimated 3SLS Coefficients:\n'</span>);
+fprintf(<span class="string">'PCE -&gt; PPI: %.5f\n'</span>, b_3SLS(1));
+fprintf(<span class="string">'PPI -&gt; PCE: %.5f\n'</span>, b_3SLS(2));
+
+<span class="comment">% Save results</span>
+save(<span class="string">'3SLS_results.mat'</span>, <span class="string">'b_3SLS'</span>);
+</pre>
+<pre class="codeoutput">Estimated 3SLS Coefficients:
+PCE -&gt; PPI: -0.00068
+PPI -&gt; PCE: 3.01208
+</pre>
+<h2 id="9">
+<b>*Impulse Response Function (IRF) Analysis</b>*</h2>
+<pre class="codeinput"><span class="comment">% Define VAR model with 4 lags</span>
+data = [PCE, PPI];
+lags = 4;
+[T, N] = size(data);
+
+<span class="comment">% Construct lag matrix</span>
+X = lagmatrix(data, 1:lags);
+Y = data(lags+1:end, :);
+X = X(lags+1:end, :);
+
+<span class="comment">% Ensure no NaNs</span>
+validRows = all(~isnan(X), 2);
+X = X(validRows, :);
+Y = Y(validRows, :);
+
+<span class="comment">% Estimate VAR coefficients</span>
+B = (X' * X) \ (X' * Y);
+
+<span class="comment">% Reshape B for IRF computation</span>
+B_full = reshape(B, N, lags, N);
+
+<span class="comment">% Initialize IRFs</span>
+n_steps = 20;
+irf_pce = zeros(n_steps, N);
+irf_ppi = zeros(n_steps, N);
+
+<span class="comment">% Initial shock vectors</span>
+shock_pce = [1; 0];
+shock_ppi = [0; 1];
+
+<span class="comment">% Apply shocks at t = 1</span>
+irf_pce(1, :) = shock_pce';
+irf_ppi(1, :) = shock_ppi';
+
+<span class="comment">% Compute IRFs recursively</span>
+<span class="keyword">for</span> t = 2:n_steps
+    irf_pce(t, :) = (B(1:N, :) * irf_pce(t-1, :)')';
+    irf_ppi(t, :) = (B(1:N, :) * irf_ppi(t-1, :)')';
+<span class="keyword">end</span>
+
+<span class="comment">% Plot IRFs</span>
+figure;
+subplot(2,1,1);
+plot(1:n_steps, irf_pce(:,1), <span class="string">'r'</span>, <span class="string">'LineWidth'</span>, 2);
+title(<span class="string">'Impulse Response of PCE to Shock'</span>);
+xlabel(<span class="string">'Time'</span>); ylabel(<span class="string">'Response'</span>); grid <span class="string">on</span>;
+
+subplot(2,1,2);
+plot(1:n_steps, irf_ppi(:,2), <span class="string">'b'</span>, <span class="string">'LineWidth'</span>, 2);
+title(<span class="string">'Impulse Response of PPI to PCE Shock'</span>);
+xlabel(<span class="string">'Time'</span>); ylabel(<span class="string">'Response'</span>); grid <span class="string">on</span>;
+
+<span class="comment">% Save figure</span>
+saveas(gcf, fullfile(save_path, <span class="string">'IRF_PCE_to_PPI_Shock.png'</span>));
+</pre>
+<img vspace="5" hspace="5" src="Team42_Project_03.png" alt=""> <img vspace="5" hspace="5" src="Team42_Project_04.png" alt=""> <h2 id="10">
+<b>*Variance Decomposition Analysis</b>*</h2>
+<pre class="codeinput">total_var = sum(irf_pce.^2 + irf_ppi.^2, 2);
+vd_pce = sum(irf_pce.^2, 2) ./ total_var;
+vd_ppi = sum(irf_ppi.^2, 2) ./ total_var;
+
+<span class="comment">% Plot Variance Decomposition</span>
+figure;
+plot(1:n_steps, vd_pce, <span class="string">'r'</span>, <span class="string">'LineWidth'</span>, 2); hold <span class="string">on</span>;
+plot(1:n_steps, vd_ppi, <span class="string">'b'</span>, <span class="string">'LineWidth'</span>, 2);
+legend(<span class="string">'Variance Explained by PCE'</span>, <span class="string">'Variance Explained by PPI'</span>);
+xlabel(<span class="string">'Time'</span>); ylabel(<span class="string">'Variance Share'</span>);
+title(<span class="string">'Variance Decomposition of PCE and PPI'</span>);
+grid <span class="string">on</span>;
+
+<span class="comment">% Save figure</span>
+saveas(gcf, fullfile(save_path, <span class="string">'Variance_Decomposition.png'</span>));
+</pre>
+<img vspace="5" hspace="5" src="Team42_Project_05.png" alt=""> <img vspace="5" hspace="5" src="Team42_Project_06.png" alt=""> <h2 id="11">Pre/Post-1980 Analysis (Difference-in-Means Test)</h2>
+<pre class="codeinput"><span class="comment">% Generate date vector for each row in data76</span>
+dates = datetime(1976, 2, 1) + calmonths(0:352); <span class="comment">% Monthly dates from 1976:2 to 2005:6</span>
+
+<span class="comment">% Create logical indices for pre-1980 and post-1980 periods</span>
+pre_1980_idx = (dates &lt; datetime(1980,1,1));
+post_1980_idx = (dates &gt;= datetime(1980,1,1));
+
+<span class="comment">% Ensure valid selection</span>
+fprintf(<span class="string">'Pre-1980 data points: %d\n'</span>, sum(pre_1980_idx));
+fprintf(<span class="string">'Post-1980 data points: %d\n'</span>, sum(post_1980_idx));
+
+<span class="comment">% Extract variables for each period</span>
+PCE_pre = PCE(pre_1980_idx);
+PCE_post = PCE(post_1980_idx);
+PPI_pre = PPI(pre_1980_idx);
+PPI_post = PPI(post_1980_idx);
+
+<span class="comment">% Compute mean values before and after 1980</span>
+mean_PCE_pre = mean(PCE_pre, <span class="string">'omitnan'</span>);
+mean_PCE_post = mean(PCE_post, <span class="string">'omitnan'</span>);
+mean_PPI_pre = mean(PPI_pre, <span class="string">'omitnan'</span>);
+mean_PPI_post = mean(PPI_post, <span class="string">'omitnan'</span>);
+
+<span class="comment">% Compute the difference-in-means</span>
+diff_PCE = mean_PCE_post - mean_PCE_pre;
+diff_PPI = mean_PPI_post - mean_PPI_pre;
+
+<span class="comment">% Display results</span>
+fprintf(<span class="string">'Difference in Means (Pre/Post-1980):\n'</span>);
+fprintf(<span class="string">'PCE: %.4f\n'</span>, diff_PCE);
+fprintf(<span class="string">'PPI: %.4f\n'</span>, diff_PPI);
+</pre>
+<pre class="codeoutput">Pre-1980 data points: 47
+Post-1980 data points: 306
+Difference in Means (Pre/Post-1980):
+PCE: -0.0035
+PPI: -0.0046
+</pre>
+<h2 id="12">Pre/Post-1980 Analysis RD Estimation (Local Linear Regression)</h2>
+<pre class="codeinput">load(<span class="string">'data76.mat'</span>); <span class="comment">% Ensure data76.mat contains all required variables</span>
+
+<span class="comment">% Generate date vector (time variable)</span>
+dates = datetime(1976, 2, 1) + calmonths(0:352); <span class="comment">% 353 months from 1976:2 to 2005:6</span>
+
+<span class="comment">% Convert time to numeric format for RD (months since 1976:2)</span>
+time = (0:352)'; <span class="comment">% 0 = Feb 1976, 47 = Jan 1980 (cutoff)</span>
+
+<span class="comment">% Define RD cutoff at January 1980</span>
+RD_cutoff = 47; <span class="comment">% Corresponds to Jan 1980</span>
+
+<span class="comment">% Define dependent variables</span>
+PCE = weighted_PCE_deflator; <span class="comment">% Use weighted PCE deflator</span>
+PPI = mean(data76(:, 500:653), 2); <span class="comment">% Average PPI (Corrected Index)</span>
+
+<span class="comment">% Define treatment variable (1 if post-1980, 0 if pre-1980)</span>
+treatment = (time &gt;= RD_cutoff);
+
+<span class="comment">% Use only a window of +/-24 months around the cutoff (2 years before &amp; after)</span>
+RD_window = abs(time - RD_cutoff) &lt;= 24;
+
+<span class="comment">% Define local datasets</span>
+time_local = time(RD_window) - RD_cutoff; <span class="comment">% Center time around cutoff</span>
+PCE_local = PCE(RD_window);
+PPI_local = PPI(RD_window);
+treatment_local = treatment(RD_window);
+
+<span class="comment">% Estimate RD regressions</span>
+b_PCE = regress(PCE_local, [ones(size(time_local)), time_local, treatment_local]);
+b_PPI = regress(PPI_local, [ones(size(time_local)), time_local, treatment_local]);
+
+<span class="comment">% Compute predicted values for plotting</span>
+time_range = (-24:24)'; <span class="comment">% 24 months before and after</span>
+PCE_fit = [ones(size(time_range)), time_range, (time_range &gt;= 0)] * b_PCE;
+PPI_fit = [ones(size(time_range)), time_range, (time_range &gt;= 0)] * b_PPI;
+
+<span class="comment">%Plot RD Results</span>
+figure;
+subplot(2,1,1);
+scatter(time_local, PCE_local, <span class="string">'b'</span>); hold <span class="string">on</span>;
+plot(time_range, PCE_fit, <span class="string">'r'</span>, <span class="string">'LineWidth'</span>, 2);
+xline(0, <span class="string">'--k'</span>, <span class="string">'1980 Policy Shift'</span>);
+xlabel(<span class="string">'Months from Jan 1980'</span>);
+ylabel(<span class="string">'PCE Deflator'</span>);
+title(<span class="string">'RD Analysis: PCE Response to 1980 Policy Change'</span>);
+
+subplot(2,1,2);
+scatter(time_local, PPI_local, <span class="string">'b'</span>); hold <span class="string">on</span>;
+plot(time_range, PPI_fit, <span class="string">'r'</span>, <span class="string">'LineWidth'</span>, 2);
+xline(0, <span class="string">'--k'</span>, <span class="string">'1980 Policy Shift'</span>);
+xlabel(<span class="string">'Months from Jan 1980'</span>);
+ylabel(<span class="string">'PPI Index'</span>);
+title(<span class="string">'RD Analysis: PPI Response to 1980 Policy Change'</span>);
+
+<span class="comment">% Save figure</span>
+saveas(gcf, fullfile(save_path, <span class="string">'RD_PCE_PPI.png'</span>));
+
+<span class="comment">%Print Estimated RD Jumps (Policy Effects)</span>
+fprintf(<span class="string">'RD Estimated Policy Effect on PCE: %.4f\n'</span>, b_PCE(3));
+fprintf(<span class="string">'RD Estimated Policy Effect on PPI: %.4f\n'</span>, b_PPI(3));
+</pre>
+<pre class="codeoutput">RD Estimated Policy Effect on PCE: 0.0030
+RD Estimated Policy Effect on PPI: 0.0026
+</pre>
+<img vspace="5" hspace="5" src="Team42_Project_07.png" alt=""> <img vspace="5" hspace="5" src="Team42_Project_08.png" alt=""> <h2 id="13">Pre/Post-1980 Analysis Placebo Test: 1978 &amp; 1982</h2>
+<pre class="codeinput"><span class="comment">% Define fake cutoff years for placebo tests</span>
+placebo_cutoffs = [23, 71]; <span class="comment">% 23 = Jan 1978, 71 = Jan 1982</span>
+
+<span class="keyword">for</span> i = 1:length(placebo_cutoffs)
+    RD_cutoff = placebo_cutoffs(i); <span class="comment">% Set fake cutoff</span>
+
+    <span class="comment">% Define treatment variable for placebo test</span>
+    treatment = (time &gt;= RD_cutoff);
+
+    <span class="comment">% Use only a window of +/-24 months</span>
+    RD_window = abs(time - RD_cutoff) &lt;= 24;
+
+    <span class="comment">% Local dataset</span>
+    time_local = time(RD_window) - RD_cutoff;
+    PCE_local = PCE(RD_window);
+    PPI_local = PPI(RD_window);
+    treatment_local = treatment(RD_window);
+
+    <span class="comment">% RD regression</span>
+    b_PCE = regress(PCE_local, [ones(size(time_local)), time_local, treatment_local]);
+    b_PPI = regress(PPI_local, [ones(size(time_local)), time_local, treatment_local]);
+
+    <span class="comment">% Compute fitted values</span>
+    time_range = (-24:24)';
+    PCE_fit = [ones(size(time_range)), time_range, (time_range &gt;= 0)] * b_PCE;
+    PPI_fit = [ones(size(time_range)), time_range, (time_range &gt;= 0)] * b_PPI;
+
+    <span class="comment">% Plot results</span>
+    figure;
+    subplot(2,1,1);
+    scatter(time_local, PCE_local, <span class="string">'b'</span>); hold <span class="string">on</span>;
+    plot(time_range, PCE_fit, <span class="string">'r'</span>, <span class="string">'LineWidth'</span>, 2);
+    xline(0, <span class="string">'--k'</span>, sprintf(<span class="string">'Placebo: %d Policy Shift'</span>, 1976 + RD_cutoff/12));
+    xlabel(<span class="string">'Months from Fake Policy Shift'</span>);
+    ylabel(<span class="string">'PCE Deflator'</span>);
+    title(sprintf(<span class="string">'Placebo RD Analysis: PCE Response (Fake %d)'</span>, 1976 + RD_cutoff/12));
+
+    subplot(2,1,2);
+    scatter(time_local, PPI_local, <span class="string">'b'</span>); hold <span class="string">on</span>;
+    plot(time_range, PPI_fit, <span class="string">'r'</span>, <span class="string">'LineWidth'</span>, 2);
+    xline(0, <span class="string">'--k'</span>, sprintf(<span class="string">'Placebo: %d Policy Shift'</span>, 1976 + RD_cutoff/12));
+    xlabel(<span class="string">'Months from Fake Policy Shift'</span>);
+    ylabel(<span class="string">'PPI Index'</span>);
+    title(sprintf(<span class="string">'Placebo RD Analysis: PPI Response (Fake %d)'</span>, 1976 + RD_cutoff/12));
+
+    <span class="comment">% Save figure</span>
+    saveas(gcf, fullfile(save_path, sprintf(<span class="string">'Placebo_RD_%d.png'</span>, 1976 + RD_cutoff/12)));
+
+    <span class="comment">% Print results</span>
+    fprintf(<span class="string">'Placebo RD Estimated Effect at Fake %d:\n'</span>, 1976 + RD_cutoff/12);
+    fprintf(<span class="string">'PCE: %.4f\n'</span>, b_PCE(3));
+    fprintf(<span class="string">'PPI: %.4f\n\n'</span>, b_PPI(3));
+<span class="keyword">end</span>
+</pre>
+<pre class="codeoutput">Placebo RD Estimated Effect at Fake 1.977917e+03:
+PCE: -0.0005
+PPI: 0.0017
+
+Placebo RD Estimated Effect at Fake 1.981917e+03:
+PCE: 0.0007
+PPI: 0.0011
+
+</pre>
+<img vspace="5" hspace="5" src="Team42_Project_09.png" alt=""> <img vspace="5" hspace="5" src="Team42_Project_10.png" alt=""> <img vspace="5" hspace="5" src="Team42_Project_11.png" alt=""> <h2 id="14">Pre/Post-1980 Analysis Bandwidth Sensitivity Test</h2>
+<pre class="codeinput"><span class="comment">% Define RD cutoff at January 1980</span>
+RD_cutoff = 47; <span class="comment">% Corresponds to Jan 1980</span>
+
+<span class="comment">% Define treatment variable</span>
+treatment = (time &gt;= RD_cutoff);
+
+<span class="comment">% Bandwidths to test</span>
+bandwidths = [12, 24, 36]; <span class="comment">% 12 months, 24 months, 36 months</span>
+
+<span class="keyword">for</span> i = 1:length(bandwidths)
+    RD_window = abs(time - RD_cutoff) &lt;= bandwidths(i);
+
+    <span class="comment">% Local dataset</span>
+    time_local = time(RD_window) - RD_cutoff;
+    PCE_local = PCE(RD_window);
+    PPI_local = PPI(RD_window);
+    treatment_local = treatment(RD_window);
+
+    <span class="comment">% RD regression</span>
+    b_PCE = regress(PCE_local, [ones(size(time_local)), time_local, treatment_local]);
+    b_PPI = regress(PPI_local, [ones(size(time_local)), time_local, treatment_local]);
+
+    <span class="comment">% Compute fitted values</span>
+    time_range = (-bandwidths(i):bandwidths(i))';
+    PCE_fit = [ones(size(time_range)), time_range, (time_range &gt;= 0)] * b_PCE;
+    PPI_fit = [ones(size(time_range)), time_range, (time_range &gt;= 0)] * b_PPI;
+
+    <span class="comment">% plot results</span>
+    figure;
+    subplot(2,1,1);
+    scatter(time_local, PCE_local, <span class="string">'b'</span>); hold <span class="string">on</span>;
+    plot(time_range, PCE_fit, <span class="string">'r'</span>, <span class="string">'LineWidth'</span>, 2);
+    xline(0, <span class="string">'--k'</span>, <span class="string">'1980 Policy Shift'</span>);
+    xlabel(<span class="string">'Months from Jan 1980'</span>);
+    ylabel(<span class="string">'PCE Deflator'</span>);
+    title(sprintf(<span class="string">'RD Analysis: PCE (Bandwidth = ±%d months)'</span>, bandwidths(i)));
+
+    subplot(2,1,2);
+    scatter(time_local, PPI_local, <span class="string">'b'</span>); hold <span class="string">on</span>;
+    plot(time_range, PPI_fit, <span class="string">'r'</span>, <span class="string">'LineWidth'</span>, 2);
+    xline(0, <span class="string">'--k'</span>, <span class="string">'1980 Policy Shift'</span>);
+    xlabel(<span class="string">'Months from Jan 1980'</span>);
+    ylabel(<span class="string">'PPI Index'</span>);
+    title(sprintf(<span class="string">'RD Analysis: PPI (Bandwidth = ±%d months)'</span>, bandwidths(i)));
+
+    <span class="comment">% Save figure</span>
+    saveas(gcf, fullfile(save_path, sprintf(<span class="string">'RD_Bandwidth_%d.png'</span>, bandwidths(i))));
+
+    <span class="comment">% Print results</span>
+    fprintf(<span class="string">'RD Estimated Effect with Bandwidth ±%d:\n'</span>, bandwidths(i));
+    fprintf(<span class="string">'PCE: %.4f\n'</span>, b_PCE(3));
+    fprintf(<span class="string">'PPI: %.4f\n\n'</span>, b_PPI(3));
+<span class="keyword">end</span>
+
+<span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+</pre>
+<pre class="codeoutput">RD Estimated Effect with Bandwidth ±12:
+PCE: 0.0031
+PPI: 0.0041
+
+RD Estimated Effect with Bandwidth ±24:
+PCE: 0.0030
+PPI: 0.0026
+
+RD Estimated Effect with Bandwidth ±36:
+PCE: 0.0029
+PPI: 0.0010
+
+</pre>
+<img vspace="5" hspace="5" src="Team42_Project_12.png" alt=""> <img vspace="5" hspace="5" src="Team42_Project_13.png" alt=""> <img vspace="5" hspace="5" src="Team42_Project_14.png" alt=""> <img vspace="5" hspace="5" src="Team42_Project_15.png" alt=""> <h2 id="15">RD on industry level_B industry--- time series analysis</h2>
+<p>Convert vnames76 from character array to cell array of strings</p>
+<pre class="codeinput">vnames76_cell = cellstr(vnames76);
+
+<span class="comment">% Display first few variable names to check format</span>
+disp(<span class="string">'First few variable names in vnames76:'</span>);
+disp(vnames76_cell(1:10));
+
+<span class="comment">% Find indices of B-Level industries (look for "_B_" in names)</span>
+B_indices = find(contains(vnames76_cell, <span class="string">'_B_'</span>));
+
+<span class="comment">% Extract the corresponding columns in data76</span>
+B_industry_data = data76(:, B_indices);
+
+<span class="comment">% Extract the names of these industries</span>
+B_industry_names = vnames76_cell(B_indices);
+
+<span class="comment">% Save extracted data for further analysis</span>
+save(<span class="string">'B_industry_data.mat'</span>, <span class="string">'B_industry_data'</span>, <span class="string">'B_industry_names'</span>, <span class="string">'B_indices'</span>);
+
+<span class="comment">% Display extracted B-Level industry names</span>
+disp(<span class="string">'Extracted B-Level Industry Names:'</span>);
+disp(B_industry_names);
+
+<span class="comment">% Define time vector (1976:2 - 2005:6)</span>
+time_vector = datetime(1976,2,1) + calmonths(0:size(B_industry_data,1)-1);
+
+<span class="comment">% Plot time series for selected industries</span>
+figure;
+hold <span class="string">on</span>;
+<span class="keyword">for</span> i = 1:length(B_industry_names)
+    plot(time_vector, B_industry_data(:, i), <span class="string">'DisplayName'</span>, B_industry_names{i});
+<span class="keyword">end</span>
+hold <span class="string">off</span>;
+legend(<span class="string">'show'</span>, <span class="string">'Location'</span>, <span class="string">'best'</span>);
+xlabel(<span class="string">'Time'</span>);
+ylabel(<span class="string">'PPI/PCE Index'</span>);
+title(<span class="string">'B-Level Industry Price Indices'</span>);
+lgd = legend(<span class="string">'show'</span>, <span class="string">'Location'</span>, <span class="string">'best'</span>);
+lgd.FontSize = 9;
+grid <span class="string">on</span>;
+<span class="comment">% Save figure</span>
+saveas(gcf, fullfile(save_path, <span class="string">'B_Industry_TimeSeries.png'</span>));
+</pre>
+<pre class="codeoutput">First few variable names in vnames76:
+    {'  1'}
+    {'  2'}
+    {'  3'}
+    {'  4'}
+    {'  5'}
+    {'  6'}
+    {'  7'}
+    {'  8'}
+    {'  9'}
+    {' 10'}
+
+Extracted B-Level Industry Names:
+    {'P1TDGG_B_Durable_goods'   }
+    {'P1TNDG_B_Nondurable_goods'}
+    {'P1TSSG_B_Services'        }
+    {'Q1TDG_B_Durable_goods'    }
+    {'Q1TND_B_Nondurable_goods' }
+    {'Q1TSS_B_Services'         }
+
+</pre>
+<img vspace="5" hspace="5" src="Team42_Project_16.png" alt=""> <img vspace="5" hspace="5" src="Team42_Project_17.png" alt=""> <h2 id="16">RD on industry level_B industry</h2>
+<p>Define cutoff for RD (1980:1)</p>
+<pre class="codeinput">cutoff_date = datetime(1980,1,1);
+
+<span class="comment">% Convert time vector to numeric months from 1980</span>
+time_months = calmonths(between(time_vector, cutoff_date, <span class="string">'months'</span>));
+
+<span class="comment">% Choose a bandwidth (e.g., ±24 months)</span>
+bandwidth = 24;
+
+<span class="comment">% Filter data within the bandwidth</span>
+in_band = abs(time_months) &lt;= bandwidth;
+time_local = time_months(in_band);
+time_local = time_local(:);
+industry_data_local = B_industry_data(in_band, :);
+
+
+<span class="comment">% Define the number of subplots</span>
+num_rows = 2; <span class="comment">% Two rows</span>
+num_cols = 3; <span class="comment">% Three columns</span>
+figure;
+
+<span class="comment">% Loop over industries and perform RD regression</span>
+<span class="keyword">for</span> i = 1:length(B_industry_names)
+    y = industry_data_local(:, i);
+    x = [ones(size(time_local)), time_local, (time_local &gt;= 0)]; <span class="comment">% RD design matrix</span>
+    b = x \ y;  <span class="comment">% OLS estimation</span>
+
+    <span class="comment">% Plot results</span>
+    figure;
+    scatter(time_local, y, <span class="string">'b'</span>); hold <span class="string">on</span>;
+    plot(time_local, x * b, <span class="string">'r'</span>, <span class="string">'LineWidth'</span>, 2);
+    xline(0, <span class="string">'--k'</span>, <span class="string">'1980 Policy Shift'</span>);
+    title([<span class="string">'RD Analysis: '</span>, B_industry_names{i}]);
+    xlabel(<span class="string">'Months from Jan 1980'</span>);
+    ylabel(<span class="string">'PPI/PCE Index'</span>);
+    grid <span class="string">on</span>;
+
+    <span class="comment">% Save figure</span>
+    saveas(gcf, fullfile(save_path, [<span class="string">'RD_'</span>, B_industry_names{i}, <span class="string">'.png'</span>]));
+<span class="keyword">end</span>
+
+<span class="comment">% Regression Discontinuity Estimates</span>
+fprintf(<span class="string">'RD Estimated Effect for %s: %.4f\n'</span>, B_industry_names{i}, b(3));
+</pre>
+<pre class="codeoutput">RD Estimated Effect for Q1TSS_B_Services: -0.0001
+</pre>
+<img vspace="5" hspace="5" src="Team42_Project_18.png" alt=""> <img vspace="5" hspace="5" src="Team42_Project_19.png" alt=""> <img vspace="5" hspace="5" src="Team42_Project_20.png" alt=""> <img vspace="5" hspace="5" src="Team42_Project_21.png" alt=""> <img vspace="5" hspace="5" src="Team42_Project_22.png" alt=""> <img vspace="5" hspace="5" src="Team42_Project_23.png" alt=""> <img vspace="5" hspace="5" src="Team42_Project_24.png" alt=""> <img vspace="5" hspace="5" src="Team42_Project_25.png" alt=""> <h2 id="17">2SLS Implementation (Using Interest Rate Spread as Policy Shock)</h2>
+<pre class="codeinput"><span class="comment">% Select variables</span>
+FFR = data76(:, 22);  <span class="comment">% Federal Funds Rate (IV)</span>
+PolicyShock = data76(:, 28); <span class="comment">% Interest rate spread (used as Policy Shock)</span>
+
+IndustryColumns = [112, 143, 209, 306, 337, 403];  <span class="comment">% Manually assign matched indices</span>
+
+<span class="comment">% Remove missing values</span>
+valid_idx = ~isnan(FFR) &amp; ~isnan(PolicyShock);
+FFR = FFR(valid_idx);
+PolicyShock = PolicyShock(valid_idx);
+IndustryData = data76(valid_idx, IndustryColumns);
+
+<span class="comment">% First stage regression: Predict PolicyShock using FFR</span>
+X1 = [ones(size(FFR)), FFR];  <span class="comment">% Add intercept term</span>
+b1 = X1 \ PolicyShock;
+PolicyShock_hat = X1 * b1;  <span class="comment">% Predicted values</span>
+
+<span class="comment">% Second stage regression: Estimate PPI/PCE impact using predicted PolicyShock</span>
+effects = zeros(length(IndustryColumns), 1);
+<span class="keyword">for</span> i = 1:length(IndustryColumns)
+    Y = IndustryData(:, i);  <span class="comment">% Extract industry data</span>
+    X2 = [ones(size(PolicyShock_hat)), PolicyShock_hat];  <span class="comment">% Add intercept term</span>
+    b2 = X2 \ Y;  <span class="comment">% OLS regression</span>
+    effects(i) = b2(2); <span class="comment">% Store coefficient</span>
+
+    <span class="comment">% Print result to console</span>
+    fprintf(<span class="string">'2SLS Estimated Effect for Industry %s: %.4f\n'</span>, B_industry_names{i}, b2(2));
+<span class="keyword">end</span>
+
+<span class="comment">% Store results in a text file</span>
+txt_file = fullfile(save_path, <span class="string">'2SLS_Results.txt'</span>);
+fileID = fopen(txt_file, <span class="string">'w'</span>); <span class="comment">% Open file for writing</span>
+
+<span class="comment">% Check if file opened correctly</span>
+<span class="keyword">if</span> fileID == -1
+    error(<span class="string">'Error opening file for writing.'</span>);
+<span class="keyword">end</span>
+
+<span class="comment">% Write header</span>
+fprintf(fileID, <span class="string">'2SLS Estimated Effects for Different Industries\n'</span>);
+fprintf(fileID, <span class="string">'---------------------------------------------\n'</span>);
+
+<span class="comment">% Write results to file</span>
+<span class="keyword">for</span> i = 1:length(B_industry_names)
+    fprintf(fileID, <span class="string">'%s: %.4f\n'</span>, B_industry_names{i}, effects(i));
+<span class="keyword">end</span>
+
+<span class="comment">% Close file</span>
+fclose(fileID);
+disp(<span class="string">'2SLS results saved successfully.'</span>);
+
+<span class="comment">% Plot bar chart for 2SLS estimates</span>
+figure;
+bar(effects);
+xticks(1:length(B_industry_names));
+xticklabels(B_industry_names);
+xtickangle(45); <span class="comment">% Rotate labels for better visibility</span>
+ax = gca;
+ax.XAxis.FontSize = 10; <span class="comment">% Adjust font size</span>
+ax.YAxis.FontSize = 12;
+ylabel(<span class="string">'2SLS Estimated Effect'</span>);
+title(<span class="string">'2SLS Estimates for Different Industries'</span>);
+grid <span class="string">on</span>;
+
+<span class="comment">% Adjust figure size to prevent label cutoff</span>
+set(gcf, <span class="string">'Position'</span>, [100, 100, 1500, 700]); <span class="comment">% Make the figure larger</span>
+
+<span class="comment">% Save figure</span>
+saveas(gcf, fullfile(save_path, <span class="string">'2SLS_Industry_Effects.png'</span>));
+</pre>
+<pre class="codeoutput">2SLS Estimated Effect for Industry P1TDGG_B_Durable_goods: -0.0030
+2SLS Estimated Effect for Industry P1TNDG_B_Nondurable_goods: -0.0021
+2SLS Estimated Effect for Industry P1TSSG_B_Services: -0.0024
+2SLS Estimated Effect for Industry Q1TDG_B_Durable_goods: 0.0046
+2SLS Estimated Effect for Industry Q1TND_B_Nondurable_goods: 0.0010
+2SLS Estimated Effect for Industry Q1TSS_B_Services: 0.0003
+2SLS results saved successfully.
+</pre>
+<img vspace="5" hspace="5" src="Team42_Project_26.png" alt=""> <img vspace="5" hspace="5" src="Team42_Project_27.png" alt=""> <h2 id="18">Implementing Alternative IVs in 2SLS</h2>
+<pre class="codeinput"><span class="comment">% Define alternative IVs</span>
+FFR = data76(:, 22);   <span class="comment">% Federal Funds Rate (original IV)</span>
+M2 = data76(:, 9);     <span class="comment">% Money Supply (M2)</span>
+ConsExp = data76(:, 37); <span class="comment">% Consumer Expectations</span>
+
+<span class="comment">% Store IVs for iteration</span>
+IV_options = {FFR, M2, ConsExp};
+IV_names = {<span class="string">'FFR'</span>, <span class="string">'M2'</span>, <span class="string">'Consumer Expectations'</span>};
+
+<span class="comment">% Loop over different IV choices</span>
+<span class="keyword">for</span> iv_idx = 1:length(IV_options)
+    IV = IV_options{iv_idx};
+
+    <span class="comment">% Remove missing values</span>
+    valid_idx = ~isnan(IV) &amp; ~isnan(PolicyShock);
+    IV = IV(valid_idx);
+    PolicyShock_valid = PolicyShock(valid_idx);
+    IndustryData_valid = IndustryData(valid_idx, :); <span class="comment">% Ensure consistent data size</span>
+
+    <span class="comment">% First-stage regression: Predict PolicyShock using IV</span>
+    X1 = [ones(size(IV)), IV];
+    b1 = X1 \ PolicyShock_valid;
+    PolicyShock_hat = X1 * b1;
+
+    <span class="comment">% Second-stage regression: Estimate PPI/PCE impact</span>
+    effects = zeros(length(IndustryColumns), 1);
+    <span class="keyword">for</span> i = 1:length(IndustryColumns)
+        Y = IndustryData_valid(:, i);
+        X2 = [ones(size(PolicyShock_hat)), PolicyShock_hat];
+        b2 = X2 \ Y;
+        effects(i) = b2(2);
+    <span class="keyword">end</span>
+
+    <span class="comment">% Save and display results</span>
+    fprintf(<span class="string">'\n2SLS Estimated Effects using %s as IV:\n'</span>, IV_names{iv_idx});
+    disp(effects);
+
+    <span class="comment">% Save results in a text file</span>
+    txt_file = fullfile(save_path, [<span class="string">'2SLS_Results_'</span>, IV_names{iv_idx}, <span class="string">'.txt'</span>]);
+    fileID = fopen(txt_file, <span class="string">'w'</span>);
+    fprintf(fileID, <span class="string">'2SLS Estimated Effects using %s as IV\n'</span>, IV_names{iv_idx});
+    fprintf(fileID, <span class="string">'---------------------------------------------\n'</span>);
+    <span class="keyword">for</span> i = 1:length(IndustryColumns)
+        fprintf(fileID, <span class="string">'%s: %.4f\n'</span>, B_industry_names{i}, effects(i));
+    <span class="keyword">end</span>
+    fclose(fileID);
+<span class="keyword">end</span>
+<span class="comment">% generate bar chart</span>
+figure;
+<span class="keyword">for</span> iv_idx = 1:length(IV_options)
+    IV = IV_options{iv_idx};
+
+    <span class="comment">% Remove missing values</span>
+    valid_idx = ~isnan(IV) &amp; ~isnan(PolicyShock);
+    IV = IV(valid_idx);
+    PolicyShock_valid = PolicyShock(valid_idx);
+    IndustryData_valid = IndustryData(valid_idx, :);
+
+    <span class="comment">% First-stage regression</span>
+    X1 = [ones(size(IV)), IV];
+    b1 = X1 \ PolicyShock_valid;
+    PolicyShock_hat = X1 * b1;
+
+    <span class="comment">% Second-stage regression</span>
+    effects = zeros(length(IndustryColumns), 1);
+    <span class="keyword">for</span> i = 1:length(IndustryColumns)
+        Y = IndustryData_valid(:, i);
+        X2 = [ones(size(PolicyShock_hat)), PolicyShock_hat];
+        b2 = X2 \ Y;
+        effects(i) = b2(2);
+    <span class="keyword">end</span>
+
+    <span class="comment">% Plot bar chart</span>
+    subplot(1,3,iv_idx);
+    bar(effects);
+    xticks(1:length(IndustryColumns));
+    xticklabels(B_industry_names);
+    xtickangle(45);
+    title([<span class="string">'2SLS using '</span>, IV_names{iv_idx}]);
+    ylabel(<span class="string">'Estimated Effect'</span>);
+    grid <span class="string">on</span>;
+<span class="keyword">end</span>
+
+<span class="comment">% Adjust figure size</span>
+set(gcf, <span class="string">'Position'</span>, [100, 100, 1800, 600]);
+
+<span class="comment">% Save figure</span>
+saveas(gcf, fullfile(save_path, <span class="string">'2SLS_Comparison_IVs.png'</span>));
+</pre>
+<pre class="codeoutput">2SLS Estimated Effects using FFR as IV:
+   -0.0030
+   -0.0021
+   -0.0024
+    0.0046
+    0.0010
+    0.0003
+
+
+2SLS Estimated Effects using M2 as IV:
+   -0.0036
+   -0.0019
+   -0.0049
+    0.0036
+    0.0026
+   -0.0011
+
+
+2SLS Estimated Effects using Consumer Expectations as IV:
+   -0.0056
+   -0.0045
+   -0.0042
+    0.0110
+    0.0025
+    0.0018
+
+</pre>
+<img vspace="5" hspace="5" src="Team42_Project_28.png" alt=""> <h2 id="19">Robustness Test</h2>
+<pre class="codeinput"><span class="comment">% Define IVs</span>
+IVs = {data76(:, 22), data76(:, 9), data76(:, 37)}; <span class="comment">% {FFR, M2, Consumer Expectations}</span>
+IV_names = {<span class="string">'FFR'</span>, <span class="string">'M2'</span>, <span class="string">'Consumer Expectations'</span>};
+
+<span class="comment">% Define endogenous variable (PolicyShock)</span>
+PolicyShock = data76(:, 28);
+
+<span class="comment">% Storage for results</span>
+Weak_IV_Fstats = zeros(1, length(IVs));
+Hausman_p_values = zeros(length(B_industry_names), length(IVs));
+
+<span class="comment">% Loop over each IV</span>
+<span class="keyword">for</span> iv_idx = 1:length(IVs)
+    IV = IVs{iv_idx}; <span class="comment">% Select current IV</span>
+    disp([<span class="string">'Testing IV: '</span>, IV_names{iv_idx}]);
+
+    <span class="comment">% Remove missing values</span>
+    valid_idx = ~isnan(IV) &amp; ~isnan(PolicyShock);
+    IV = IV(valid_idx);
+    PolicyShock_clean = PolicyShock(valid_idx);
+    IndustryData_clean = data76(valid_idx, IndustryColumns);
+
+    <span class="comment">% ** Weak IV Test (First-stage F-statistic) **</span>
+    X1 = [ones(size(IV)), IV];  <span class="comment">% Add intercept</span>
+    [b1,~,~,~,stats] = regress(PolicyShock_clean, X1);
+    F_stat = stats(2); <span class="comment">% Extract F-statistic</span>
+    Weak_IV_Fstats(iv_idx) = F_stat;
+
+    <span class="comment">% Display F-statistic result</span>
+    fprintf(<span class="string">'First-stage F-statistic for IV (%s): %.2f\n'</span>, IV_names{iv_idx}, F_stat);
+    <span class="keyword">if</span> F_stat &lt; 10
+        warning(<span class="string">'Weak IV detected for %s! Consider alternative instruments.'</span>, IV_names{iv_idx});
+    <span class="keyword">else</span>
+        disp([<span class="string">'IV ('</span>, IV_names{iv_idx}, <span class="string">') is strong.'</span>]);
+    <span class="keyword">end</span>
+
+    <span class="comment">% ** Hausman Test (Endogeneity Test) **</span>
+    PolicyShock_hat = X1 * b1;  <span class="comment">% Predicted values</span>
+    residuals = PolicyShock_clean - PolicyShock_hat;
+
+    <span class="keyword">for</span> i = 1:length(IndustryColumns)
+        Y = IndustryData_clean(:, i);  <span class="comment">% Extract industry data</span>
+        X2 = [ones(size(PolicyShock_hat)), PolicyShock_hat, residuals];  <span class="comment">% Include residuals</span>
+
+        <span class="comment">% Run OLS regression with residuals</span>
+        [b2,~,~,~,stats] = regress(Y, X2);
+        p_value = 1 - fcdf(stats(2), 1, length(PolicyShock_hat) - 3); <span class="comment">% Compute p-value</span>
+
+        <span class="comment">% Store and display Hausman test result</span>
+        Hausman_p_values(i, iv_idx) = p_value;
+        fprintf(<span class="string">'Hausman test p-value for Industry %s (IV: %s): %.4f\n'</span>, B_industry_names{i}, IV_names{iv_idx}, p_value);
+
+        <span class="keyword">if</span> p_value &lt; 0.05
+            disp(<span class="string">'Endogeneity detected! 2SLS is preferred.'</span>);
+        <span class="keyword">else</span>
+            disp(<span class="string">'No endogeneity detected. OLS estimates are valid.'</span>);
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+<span class="comment">% ** Summary of Results **</span>
+disp(<span class="string">'------------------------------------------'</span>);
+disp(<span class="string">'Weak IV Test (First-stage F-statistics):'</span>);
+disp(array2table(Weak_IV_Fstats, <span class="string">'VariableNames'</span>, IV_names));
+
+disp(<span class="string">'------------------------------------------'</span>);
+disp(<span class="string">'Hausman Test Results (p-values for endogeneity test):'</span>);
+disp(array2table(Hausman_p_values, <span class="string">'VariableNames'</span>, IV_names, <span class="string">'RowNames'</span>, B_industry_names));
+
+<span class="comment">% Define file path</span>
+results_file = fullfile(save_path, <span class="string">'Robustness_Tests_Results.txt'</span>);
+fileID = fopen(results_file, <span class="string">'w'</span>); <span class="comment">% Open file for writing</span>
+
+<span class="comment">% Write F-statistics results</span>
+fprintf(fileID, <span class="string">'Weak IV Test (First-stage F-statistics):\n'</span>);
+fprintf(fileID, <span class="string">'------------------------------------------\n'</span>);
+<span class="keyword">for</span> iv_idx = 1:length(IV_names)
+    fprintf(fileID, <span class="string">'%s: %.2f\n'</span>, IV_names{iv_idx}, Weak_IV_Fstats(iv_idx));
+<span class="keyword">end</span>
+fprintf(fileID, <span class="string">'\n'</span>);
+
+<span class="comment">% Write Hausman Test results</span>
+fprintf(fileID, <span class="string">'Hausman Test Results (p-values for endogeneity test):\n'</span>);
+fprintf(fileID, <span class="string">'------------------------------------------\n'</span>);
+<span class="keyword">for</span> i = 1:length(B_industry_names)
+    <span class="keyword">for</span> iv_idx = 1:length(IV_names)
+        fprintf(fileID, <span class="string">'Industry: %s, IV: %s, p-value: %.4f\n'</span>, B_industry_names{i}, IV_names{iv_idx}, Hausman_p_values(i, iv_idx));
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+<span class="comment">% Close file</span>
+fclose(fileID);
+disp(<span class="string">'Robustness test results saved successfully.'</span>);
+</pre>
+<pre class="codeoutput">Testing IV: FFR
+First-stage F-statistic for IV (FFR): 785.31
+IV (FFR) is strong.
+Hausman test p-value for Industry P1TDGG_B_Durable_goods (IV: FFR): 0.0000
+Endogeneity detected! 2SLS is preferred.
+Hausman test p-value for Industry P1TNDG_B_Nondurable_goods (IV: FFR): 0.0001
+Endogeneity detected! 2SLS is preferred.
+Hausman test p-value for Industry P1TSSG_B_Services (IV: FFR): 0.0000
+Endogeneity detected! 2SLS is preferred.
+Hausman test p-value for Industry Q1TDG_B_Durable_goods (IV: FFR): 0.2575
+No endogeneity detected. OLS estimates are valid.
+Hausman test p-value for Industry Q1TND_B_Nondurable_goods (IV: FFR): 0.2515
+No endogeneity detected. OLS estimates are valid.
+Hausman test p-value for Industry Q1TSS_B_Services (IV: FFR): 0.1595
+No endogeneity detected. OLS estimates are valid.
+Testing IV: M2
+First-stage F-statistic for IV (M2): 11.12
+IV (M2) is strong.
+Hausman test p-value for Industry P1TDGG_B_Durable_goods (IV: M2): 0.0000
+Endogeneity detected! 2SLS is preferred.
+Hausman test p-value for Industry P1TNDG_B_Nondurable_goods (IV: M2): 0.0055
+Endogeneity detected! 2SLS is preferred.
+Hausman test p-value for Industry P1TSSG_B_Services (IV: M2): 0.0000
+Endogeneity detected! 2SLS is preferred.
+Hausman test p-value for Industry Q1TDG_B_Durable_goods (IV: M2): 0.3223
+No endogeneity detected. OLS estimates are valid.
+Hausman test p-value for Industry Q1TND_B_Nondurable_goods (IV: M2): 0.3836
+No endogeneity detected. OLS estimates are valid.
+Hausman test p-value for Industry Q1TSS_B_Services (IV: M2): 0.1525
+No endogeneity detected. OLS estimates are valid.
+Testing IV: Consumer Expectations
+First-stage F-statistic for IV (Consumer Expectations): 79.07
+IV (Consumer Expectations) is strong.
+Hausman test p-value for Industry P1TDGG_B_Durable_goods (IV: Consumer Expectations): 0.0000
+Endogeneity detected! 2SLS is preferred.
+Hausman test p-value for Industry P1TNDG_B_Nondurable_goods (IV: Consumer Expectations): 0.0000
+Endogeneity detected! 2SLS is preferred.
+Hausman test p-value for Industry P1TSSG_B_Services (IV: Consumer Expectations): 0.0000
+Endogeneity detected! 2SLS is preferred.
+Hausman test p-value for Industry Q1TDG_B_Durable_goods (IV: Consumer Expectations): 0.1404
+No endogeneity detected. OLS estimates are valid.
+Hausman test p-value for Industry Q1TND_B_Nondurable_goods (IV: Consumer Expectations): 0.1489
+No endogeneity detected. OLS estimates are valid.
+Hausman test p-value for Industry Q1TSS_B_Services (IV: Consumer Expectations): 0.0439
+Endogeneity detected! 2SLS is preferred.
+------------------------------------------
+Weak IV Test (First-stage F-statistics):
+     FFR        M2      Consumer Expectations
+    ______    ______    _____________________
+
+    785.31    11.123           79.073        
+
+------------------------------------------
+Hausman Test Results (p-values for endogeneity test):
+                                    FFR            M2        Consumer Expectations
+                                 __________    __________    _____________________
+
+    P1TDGG_B_Durable_goods       1.0991e-14    1.5831e-07         6.2172e-15      
+    P1TNDG_B_Nondurable_goods    0.00010596     0.0055348         1.2856e-05      
+    P1TSSG_B_Services                     0    5.0471e-13                  0      
+    Q1TDG_B_Durable_goods           0.25755       0.32233            0.14036      
+    Q1TND_B_Nondurable_goods        0.25154       0.38362            0.14894      
+    Q1TSS_B_Services                0.15953       0.15252           0.043947      
+
+Robustness test results saved successfully.
+</pre>
+<p class="footer">
+<br>
+<a href="https://www.mathworks.com/products/matlab/">Published with MATLAB® R2024b</a>
+<br>
+</p>
+</div>
+<!--
+##### SOURCE BEGIN #####
+% =============================
+% Team42_Project.m
+% Team members: Jiayi(Joey) Liu, Yujin(Kim) Zhang, Hongyi(Clark) Zhong, 
+%               Syed Irtiza Medhi, Demir Degirmenci
+% =============================
+%% Descriptive Analysis
+% Load data
+load('data76.mat'); % Ensure data76.mat contains all required variables
+
+% Define save path for figures
+save_path = 'D:\OneDrive\桌面\Empirical economic analysis\Final project\Figures\';
+
+% Define variable indices
+PMI_index = 60;
+PPI_indices = 500:653;
+PCE_deflator_indices = 112:305;
+PCE_quantities_indices = 306:499;
+
+% Extract data
+PMI = data76(:, PMI_index);
+PPI = data76(:, PPI_indices);
+PCE_deflator = data76(:, PCE_deflator_indices);
+PCE_quantities = data76(:, PCE_quantities_indices);
+
+% Compute weighted PCE deflator and weighted PCE quantities
+weights_adjusted = [weights; zeros(4,1)]; % Adjust weights for matrix multiplication
+weighted_PCE_deflator = PCE_deflator * weights_adjusted;
+weighted_PCE_quantities = PCE_quantities * weights_adjusted;
+
+% Define time vector (Monthly data from 1976-02 to 2005-06)
+time_vector = datetime(1976,2,1) : calmonths(1) : datetime(2005,6,1);
+
+%% **1. Time Series Plot**
+figure;
+subplot(3,1,1);
+plot(time_vector, weighted_PCE_deflator, 'b', 'LineWidth', 1.5);
+title('Weighted PCE Deflator Over Time');
+xlabel('Time');
+ylabel('Deflator Index');
+xtickformat('yyyy-MM'); % Format x-axis labels as Year-Month
+xticks(time_vector(1:24:end)); % Show ticks every 2 years
+
+subplot(3,1,2);
+plot(time_vector, weighted_PCE_quantities, 'r', 'LineWidth', 1.5);
+title('Weighted PCE Quantities Over Time');
+xlabel('Time');
+ylabel('Quantities');
+xtickformat('yyyy-MM');
+xticks(time_vector(1:24:end));
+
+subplot(3,1,3);
+plot(time_vector, PMI, 'g', 'LineWidth', 1.5);
+hold on;
+plot(time_vector, mean(PPI, 2), 'k', 'LineWidth', 1.5);
+title('PMI and Average PPI Over Time');
+xlabel('Time');
+ylabel('Index');
+legend('PMI', 'Average PPI');
+xtickformat('yyyy-MM');
+xticks(time_vector(1:24:end));
+
+% Save figure
+saveas(gcf, fullfile(save_path, 'time_series_plot.png'));
+
+%% **2. Seasonal Decomposition Alternative**
+% Compute 12-month moving average as trend component
+trend_PCE = movmean(weighted_PCE_deflator, 12);
+
+% Compute seasonal component as the difference between actual and trend
+seasonal_PCE = weighted_PCE_deflator - trend_PCE;
+
+% Compute residual component as remaining fluctuations
+residual_PCE = weighted_PCE_deflator - trend_PCE - mean(seasonal_PCE, 'omitnan');
+
+% Plot seasonal decomposition components
+figure;
+subplot(3,1,1); 
+plot(time_vector, trend_PCE, 'b', 'LineWidth', 1.5);
+title('Trend Component');
+
+subplot(3,1,2); 
+plot(time_vector, seasonal_PCE, 'r', 'LineWidth', 1.5);
+title('Seasonal Component');
+
+subplot(3,1,3); 
+plot(time_vector, residual_PCE, 'k', 'LineWidth', 1.5);
+title('Residual Component');
+
+xtickformat('yyyy-MM');
+xticks(time_vector(1:24:end));
+
+% Save the figure
+saveas(gcf, fullfile(save_path, 'seasonal_decomposition_fixed.png'));
+
+%% **3. Correlation Analysis**
+% Compute correlation between PMI and weighted PCE deflator
+corr_PMI_PCE = corr(PMI, weighted_PCE_deflator, 'Rows', 'complete');
+% Compute correlation between PPI (average) and weighted PCE deflator
+corr_PPI_PCE = corr(mean(PPI, 2), weighted_PCE_deflator, 'Rows', 'complete');
+
+fprintf('Correlation between PMI and Weighted PCE Deflator: %.4f\n', corr_PMI_PCE);
+fprintf('Correlation between Average PPI and Weighted PCE Deflator: %.4f\n', corr_PPI_PCE);
+
+%% **4. Regression Analysis**
+% Define independent variables (PMI and average PPI)
+X = [PMI, mean(PPI, 2)];
+y = weighted_PCE_deflator; % Define dependent variable
+
+% Add intercept term to X matrix
+X = [ones(size(X,1),1), X];
+
+% Perform linear regression
+[b,~,~,~,stats] = regress(y, X);
+
+% Display regression results
+fprintf('Regression Results:\n');
+fprintf('Intercept: %.4f\n', b(1));
+fprintf('PMI Coefficient: %.4f\n', b(2));
+fprintf('Average PPI Coefficient: %.4f\n', b(3));
+fprintf('R-squared: %.4f\n', stats(1));
+
+% Save regression results as a text file
+fileID = fopen(fullfile(save_path, 'regression_results.txt'), 'w');
+fprintf(fileID, 'Regression Results:\n');
+fprintf(fileID, 'Intercept: %.4f\n', b(1));
+fprintf(fileID, 'PMI Coefficient: %.4f\n', b(2));
+fprintf(fileID, 'Average PPI Coefficient: %.4f\n', b(3));
+fprintf(fileID, 'R-squared: %.4f\n', stats(1));
+fclose(fileID);
+
+%% **2SLS Estimation (Instrumental Variables Regression)**
+
+% Use the weighted PCE deflator instead of a single column
+PCE = weighted_PCE_deflator; 
+PPI = mean(data76(:, 500:653), 2); % Average PPI (Corrected Index)
+
+% Corrected instrumental variables selection
+IVs_PCE = data76(:, [85, 3]);  % Money Supply & Exchange Rate
+IVs_PPI = data76(:, [54, 57]); % Unemployment Rate & Energy Prices
+
+% First-stage regression: Predict endogenous variables using IVs
+PCE_hat = IVs_PCE * (IVs_PCE \ PCE); % Project PCE on IVs
+PPI_hat = IVs_PPI * (IVs_PPI \ PPI); % Project PPI on IVs
+
+% Second-stage regression: Use predicted values in the main equation
+b1 = (PCE_hat \ PPI); % PCE -> PPI
+b2 = (PPI_hat \ PCE); % PPI -> PCE
+
+% Display results
+fprintf('Estimated 2SLS Coefficients:\n');
+fprintf('PCE -> PPI: %.4f\n', b1);
+fprintf('PPI -> PCE: %.4f\n', b2);
+
+% Save results
+save('2SLS_results.mat', 'b1', 'b2');
+
+%% **3SLS Estimation for PCE and PPI Relationship**
+
+% Define independent variables (Interest Rate & Personal Income)
+X_PCE = data76(:, [22, 36]); % Interest Rate & Personal Income
+X_PPI = data76(:, [22, 36]); % Interest Rate & Personal Income
+
+% Stack equations into system
+Y = [PPI; PCE];      
+X = blkdiag(X_PPI, X_PCE); 
+Z = blkdiag(IVs_PPI, IVs_PCE); % Instrumental variables
+
+% First-stage projection
+Z_transpose = Z';
+Pi = (Z_transpose * Z) \ (Z_transpose * X);
+X_hat = Z * Pi; % Predicted values using IVs
+
+% Second-stage estimation using GLS
+b_3SLS = (X_hat' * X_hat) \ (X_hat' * Y);
+
+% Display results
+fprintf('\nEstimated 3SLS Coefficients:\n');
+fprintf('PCE -> PPI: %.5f\n', b_3SLS(1));
+fprintf('PPI -> PCE: %.5f\n', b_3SLS(2));
+
+% Save results
+save('3SLS_results.mat', 'b_3SLS');
+
+
+%% **Impulse Response Function (IRF) Analysis**
+
+% Define VAR model with 4 lags
+data = [PCE, PPI];
+lags = 4;
+[T, N] = size(data);
+
+% Construct lag matrix
+X = lagmatrix(data, 1:lags);
+Y = data(lags+1:end, :);
+X = X(lags+1:end, :);
+
+% Ensure no NaNs
+validRows = all(~isnan(X), 2);
+X = X(validRows, :);
+Y = Y(validRows, :);
+
+% Estimate VAR coefficients
+B = (X' * X) \ (X' * Y);
+
+% Reshape B for IRF computation
+B_full = reshape(B, N, lags, N);
+
+% Initialize IRFs
+n_steps = 20;
+irf_pce = zeros(n_steps, N);
+irf_ppi = zeros(n_steps, N);
+
+% Initial shock vectors
+shock_pce = [1; 0];  
+shock_ppi = [0; 1];  
+
+% Apply shocks at t = 1
+irf_pce(1, :) = shock_pce';
+irf_ppi(1, :) = shock_ppi';
+
+% Compute IRFs recursively
+for t = 2:n_steps
+    irf_pce(t, :) = (B(1:N, :) * irf_pce(t-1, :)')'; 
+    irf_ppi(t, :) = (B(1:N, :) * irf_ppi(t-1, :)')';
+end
+
+% Plot IRFs
+figure;
+subplot(2,1,1);
+plot(1:n_steps, irf_pce(:,1), 'r', 'LineWidth', 2);
+title('Impulse Response of PCE to Shock');
+xlabel('Time'); ylabel('Response'); grid on;
+
+subplot(2,1,2);
+plot(1:n_steps, irf_ppi(:,2), 'b', 'LineWidth', 2);
+title('Impulse Response of PPI to PCE Shock');
+xlabel('Time'); ylabel('Response'); grid on;
+
+% Save figure
+saveas(gcf, fullfile(save_path, 'IRF_PCE_to_PPI_Shock.png'));
+
+%% **Variance Decomposition Analysis**
+total_var = sum(irf_pce.^2 + irf_ppi.^2, 2);
+vd_pce = sum(irf_pce.^2, 2) ./ total_var;
+vd_ppi = sum(irf_ppi.^2, 2) ./ total_var;
+
+% Plot Variance Decomposition
+figure;
+plot(1:n_steps, vd_pce, 'r', 'LineWidth', 2); hold on;
+plot(1:n_steps, vd_ppi, 'b', 'LineWidth', 2);
+legend('Variance Explained by PCE', 'Variance Explained by PPI');
+xlabel('Time'); ylabel('Variance Share');
+title('Variance Decomposition of PCE and PPI');
+grid on;
+
+% Save figure
+saveas(gcf, fullfile(save_path, 'Variance_Decomposition.png'));
+
+%% Pre/Post-1980 Analysis (Difference-in-Means Test)
+
+% Generate date vector for each row in data76
+dates = datetime(1976, 2, 1) + calmonths(0:352); % Monthly dates from 1976:2 to 2005:6
+
+% Create logical indices for pre-1980 and post-1980 periods
+pre_1980_idx = (dates < datetime(1980,1,1));  
+post_1980_idx = (dates >= datetime(1980,1,1));
+
+% Ensure valid selection
+fprintf('Pre-1980 data points: %d\n', sum(pre_1980_idx));
+fprintf('Post-1980 data points: %d\n', sum(post_1980_idx));
+
+% Extract variables for each period
+PCE_pre = PCE(pre_1980_idx);
+PCE_post = PCE(post_1980_idx);
+PPI_pre = PPI(pre_1980_idx);
+PPI_post = PPI(post_1980_idx);
+
+% Compute mean values before and after 1980
+mean_PCE_pre = mean(PCE_pre, 'omitnan');
+mean_PCE_post = mean(PCE_post, 'omitnan');
+mean_PPI_pre = mean(PPI_pre, 'omitnan');
+mean_PPI_post = mean(PPI_post, 'omitnan');
+
+% Compute the difference-in-means
+diff_PCE = mean_PCE_post - mean_PCE_pre;
+diff_PPI = mean_PPI_post - mean_PPI_pre;
+
+% Display results
+fprintf('Difference in Means (Pre/Post-1980):\n');
+fprintf('PCE: %.4f\n', diff_PCE);
+fprintf('PPI: %.4f\n', diff_PPI);
+
+%% Pre/Post-1980 Analysis RD Estimation (Local Linear Regression)
+load('data76.mat'); % Ensure data76.mat contains all required variables
+
+% Generate date vector (time variable)
+dates = datetime(1976, 2, 1) + calmonths(0:352); % 353 months from 1976:2 to 2005:6
+
+% Convert time to numeric format for RD (months since 1976:2)
+time = (0:352)'; % 0 = Feb 1976, 47 = Jan 1980 (cutoff)
+
+% Define RD cutoff at January 1980
+RD_cutoff = 47; % Corresponds to Jan 1980
+
+% Define dependent variables
+PCE = weighted_PCE_deflator; % Use weighted PCE deflator
+PPI = mean(data76(:, 500:653), 2); % Average PPI (Corrected Index)
+
+% Define treatment variable (1 if post-1980, 0 if pre-1980)
+treatment = (time >= RD_cutoff);
+
+% Use only a window of +/-24 months around the cutoff (2 years before & after)
+RD_window = abs(time - RD_cutoff) <= 24;
+
+% Define local datasets
+time_local = time(RD_window) - RD_cutoff; % Center time around cutoff
+PCE_local = PCE(RD_window);
+PPI_local = PPI(RD_window);
+treatment_local = treatment(RD_window);
+
+% Estimate RD regressions
+b_PCE = regress(PCE_local, [ones(size(time_local)), time_local, treatment_local]);
+b_PPI = regress(PPI_local, [ones(size(time_local)), time_local, treatment_local]);
+
+% Compute predicted values for plotting
+time_range = (-24:24)'; % 24 months before and after
+PCE_fit = [ones(size(time_range)), time_range, (time_range >= 0)] * b_PCE;
+PPI_fit = [ones(size(time_range)), time_range, (time_range >= 0)] * b_PPI;
+
+%Plot RD Results
+figure;
+subplot(2,1,1);
+scatter(time_local, PCE_local, 'b'); hold on;
+plot(time_range, PCE_fit, 'r', 'LineWidth', 2);
+xline(0, 'REPLACE_WITH_DASH_DASHk', '1980 Policy Shift');
+xlabel('Months from Jan 1980');
+ylabel('PCE Deflator');
+title('RD Analysis: PCE Response to 1980 Policy Change');
+
+subplot(2,1,2);
+scatter(time_local, PPI_local, 'b'); hold on;
+plot(time_range, PPI_fit, 'r', 'LineWidth', 2);
+xline(0, 'REPLACE_WITH_DASH_DASHk', '1980 Policy Shift');
+xlabel('Months from Jan 1980');
+ylabel('PPI Index');
+title('RD Analysis: PPI Response to 1980 Policy Change');
+
+% Save figure
+saveas(gcf, fullfile(save_path, 'RD_PCE_PPI.png'));
+
+%Print Estimated RD Jumps (Policy Effects)
+fprintf('RD Estimated Policy Effect on PCE: %.4f\n', b_PCE(3));
+fprintf('RD Estimated Policy Effect on PPI: %.4f\n', b_PPI(3));
+
+%% Pre/Post-1980 Analysis Placebo Test: 1978 & 1982 
+
+% Define fake cutoff years for placebo tests
+placebo_cutoffs = [23, 71]; % 23 = Jan 1978, 71 = Jan 1982
+
+for i = 1:length(placebo_cutoffs)
+    RD_cutoff = placebo_cutoffs(i); % Set fake cutoff
+
+    % Define treatment variable for placebo test
+    treatment = (time >= RD_cutoff);
+    
+    % Use only a window of +/-24 months
+    RD_window = abs(time - RD_cutoff) <= 24;
+    
+    % Local dataset
+    time_local = time(RD_window) - RD_cutoff;
+    PCE_local = PCE(RD_window);
+    PPI_local = PPI(RD_window);
+    treatment_local = treatment(RD_window);
+    
+    % RD regression
+    b_PCE = regress(PCE_local, [ones(size(time_local)), time_local, treatment_local]);
+    b_PPI = regress(PPI_local, [ones(size(time_local)), time_local, treatment_local]);
+
+    % Compute fitted values
+    time_range = (-24:24)';
+    PCE_fit = [ones(size(time_range)), time_range, (time_range >= 0)] * b_PCE;
+    PPI_fit = [ones(size(time_range)), time_range, (time_range >= 0)] * b_PPI;
+    
+    % Plot results
+    figure;
+    subplot(2,1,1);
+    scatter(time_local, PCE_local, 'b'); hold on;
+    plot(time_range, PCE_fit, 'r', 'LineWidth', 2);
+    xline(0, 'REPLACE_WITH_DASH_DASHk', sprintf('Placebo: %d Policy Shift', 1976 + RD_cutoff/12));
+    xlabel('Months from Fake Policy Shift');
+    ylabel('PCE Deflator');
+    title(sprintf('Placebo RD Analysis: PCE Response (Fake %d)', 1976 + RD_cutoff/12));
+    
+    subplot(2,1,2);
+    scatter(time_local, PPI_local, 'b'); hold on;
+    plot(time_range, PPI_fit, 'r', 'LineWidth', 2);
+    xline(0, 'REPLACE_WITH_DASH_DASHk', sprintf('Placebo: %d Policy Shift', 1976 + RD_cutoff/12));
+    xlabel('Months from Fake Policy Shift');
+    ylabel('PPI Index');
+    title(sprintf('Placebo RD Analysis: PPI Response (Fake %d)', 1976 + RD_cutoff/12));
+
+    % Save figure
+    saveas(gcf, fullfile(save_path, sprintf('Placebo_RD_%d.png', 1976 + RD_cutoff/12)));
+
+    % Print results
+    fprintf('Placebo RD Estimated Effect at Fake %d:\n', 1976 + RD_cutoff/12);
+    fprintf('PCE: %.4f\n', b_PCE(3));
+    fprintf('PPI: %.4f\n\n', b_PPI(3));
+end
+
+%% Pre/Post-1980 Analysis Bandwidth Sensitivity Test
+
+% Define RD cutoff at January 1980
+RD_cutoff = 47; % Corresponds to Jan 1980
+
+% Define treatment variable
+treatment = (time >= RD_cutoff);
+
+% Bandwidths to test
+bandwidths = [12, 24, 36]; % 12 months, 24 months, 36 months
+
+for i = 1:length(bandwidths)
+    RD_window = abs(time - RD_cutoff) <= bandwidths(i);
+
+    % Local dataset
+    time_local = time(RD_window) - RD_cutoff;
+    PCE_local = PCE(RD_window);
+    PPI_local = PPI(RD_window);
+    treatment_local = treatment(RD_window);
+    
+    % RD regression
+    b_PCE = regress(PCE_local, [ones(size(time_local)), time_local, treatment_local]);
+    b_PPI = regress(PPI_local, [ones(size(time_local)), time_local, treatment_local]);
+
+    % Compute fitted values
+    time_range = (-bandwidths(i):bandwidths(i))';
+    PCE_fit = [ones(size(time_range)), time_range, (time_range >= 0)] * b_PCE;
+    PPI_fit = [ones(size(time_range)), time_range, (time_range >= 0)] * b_PPI;
+    
+    % plot results
+    figure;
+    subplot(2,1,1);
+    scatter(time_local, PCE_local, 'b'); hold on;
+    plot(time_range, PCE_fit, 'r', 'LineWidth', 2);
+    xline(0, 'REPLACE_WITH_DASH_DASHk', '1980 Policy Shift');
+    xlabel('Months from Jan 1980');
+    ylabel('PCE Deflator');
+    title(sprintf('RD Analysis: PCE (Bandwidth = ±%d months)', bandwidths(i)));
+    
+    subplot(2,1,2);
+    scatter(time_local, PPI_local, 'b'); hold on;
+    plot(time_range, PPI_fit, 'r', 'LineWidth', 2);
+    xline(0, 'REPLACE_WITH_DASH_DASHk', '1980 Policy Shift');
+    xlabel('Months from Jan 1980');
+    ylabel('PPI Index');
+    title(sprintf('RD Analysis: PPI (Bandwidth = ±%d months)', bandwidths(i)));
+
+    % Save figure
+    saveas(gcf, fullfile(save_path, sprintf('RD_Bandwidth_%d.png', bandwidths(i))));
+
+    % Print results
+    fprintf('RD Estimated Effect with Bandwidth ±%d:\n', bandwidths(i));
+    fprintf('PCE: %.4f\n', b_PCE(3));
+    fprintf('PPI: %.4f\n\n', b_PPI(3));
+end
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% RD on industry level_B industryREPLACE_WITH_DASH_DASH- time series analysis
+% Convert vnames76 from character array to cell array of strings
+vnames76_cell = cellstr(vnames76); 
+
+% Display first few variable names to check format
+disp('First few variable names in vnames76:');
+disp(vnames76_cell(1:10));
+
+% Find indices of B-Level industries (look for "_B_" in names)
+B_indices = find(contains(vnames76_cell, '_B_'));
+
+% Extract the corresponding columns in data76
+B_industry_data = data76(:, B_indices);
+
+% Extract the names of these industries
+B_industry_names = vnames76_cell(B_indices);
+
+% Save extracted data for further analysis
+save('B_industry_data.mat', 'B_industry_data', 'B_industry_names', 'B_indices');
+
+% Display extracted B-Level industry names
+disp('Extracted B-Level Industry Names:');
+disp(B_industry_names);
+
+% Define time vector (1976:2 - 2005:6)
+time_vector = datetime(1976,2,1) + calmonths(0:size(B_industry_data,1)-1);
+
+% Plot time series for selected industries
+figure;
+hold on;
+for i = 1:length(B_industry_names)
+    plot(time_vector, B_industry_data(:, i), 'DisplayName', B_industry_names{i});
+end
+hold off;
+legend('show', 'Location', 'best');
+xlabel('Time');
+ylabel('PPI/PCE Index');
+title('B-Level Industry Price Indices');
+lgd = legend('show', 'Location', 'best'); 
+lgd.FontSize = 9;
+grid on;
+% Save figure
+saveas(gcf, fullfile(save_path, 'B_Industry_TimeSeries.png'));
+%% RD on industry level_B industry
+% Define cutoff for RD (1980:1)
+cutoff_date = datetime(1980,1,1);
+
+% Convert time vector to numeric months from 1980
+time_months = calmonths(between(time_vector, cutoff_date, 'months'));
+
+% Choose a bandwidth (e.g., ±24 months)
+bandwidth = 24;
+
+% Filter data within the bandwidth
+in_band = abs(time_months) <= bandwidth;
+time_local = time_months(in_band);
+time_local = time_local(:);
+industry_data_local = B_industry_data(in_band, :);
+
+
+% Define the number of subplots
+num_rows = 2; % Two rows
+num_cols = 3; % Three columns
+figure;
+
+% Loop over industries and perform RD regression
+for i = 1:length(B_industry_names)
+    y = industry_data_local(:, i);
+    x = [ones(size(time_local)), time_local, (time_local >= 0)]; % RD design matrix
+    b = x \ y;  % OLS estimation
+    
+    % Plot results
+    figure;
+    scatter(time_local, y, 'b'); hold on;
+    plot(time_local, x * b, 'r', 'LineWidth', 2);
+    xline(0, 'REPLACE_WITH_DASH_DASHk', '1980 Policy Shift');
+    title(['RD Analysis: ', B_industry_names{i}]);
+    xlabel('Months from Jan 1980');
+    ylabel('PPI/PCE Index');
+    grid on;
+
+    % Save figure
+    saveas(gcf, fullfile(save_path, ['RD_', B_industry_names{i}, '.png']));
+end
+
+% Regression Discontinuity Estimates
+fprintf('RD Estimated Effect for %s: %.4f\n', B_industry_names{i}, b(3));
+
+
+%% 2SLS Implementation (Using Interest Rate Spread as Policy Shock)
+
+% Select variables
+FFR = data76(:, 22);  % Federal Funds Rate (IV)
+PolicyShock = data76(:, 28); % Interest rate spread (used as Policy Shock)
+
+IndustryColumns = [112, 143, 209, 306, 337, 403];  % Manually assign matched indices
+
+% Remove missing values
+valid_idx = ~isnan(FFR) & ~isnan(PolicyShock);
+FFR = FFR(valid_idx);
+PolicyShock = PolicyShock(valid_idx);
+IndustryData = data76(valid_idx, IndustryColumns);
+
+% First stage regression: Predict PolicyShock using FFR
+X1 = [ones(size(FFR)), FFR];  % Add intercept term
+b1 = X1 \ PolicyShock;  
+PolicyShock_hat = X1 * b1;  % Predicted values
+
+% Second stage regression: Estimate PPI/PCE impact using predicted PolicyShock
+effects = zeros(length(IndustryColumns), 1);
+for i = 1:length(IndustryColumns)
+    Y = IndustryData(:, i);  % Extract industry data
+    X2 = [ones(size(PolicyShock_hat)), PolicyShock_hat];  % Add intercept term
+    b2 = X2 \ Y;  % OLS regression
+    effects(i) = b2(2); % Store coefficient
+
+    % Print result to console
+    fprintf('2SLS Estimated Effect for Industry %s: %.4f\n', B_industry_names{i}, b2(2));
+end
+
+% Store results in a text file
+txt_file = fullfile(save_path, '2SLS_Results.txt');
+fileID = fopen(txt_file, 'w'); % Open file for writing
+
+% Check if file opened correctly
+if fileID == -1
+    error('Error opening file for writing.');
+end
+
+% Write header
+fprintf(fileID, '2SLS Estimated Effects for Different Industries\n');
+fprintf(fileID, 'REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-\n');
+
+% Write results to file
+for i = 1:length(B_industry_names)
+    fprintf(fileID, '%s: %.4f\n', B_industry_names{i}, effects(i));
+end
+
+% Close file
+fclose(fileID);
+disp('2SLS results saved successfully.');
+
+% Plot bar chart for 2SLS estimates
+figure;
+bar(effects);
+xticks(1:length(B_industry_names));
+xticklabels(B_industry_names);
+xtickangle(45); % Rotate labels for better visibility
+ax = gca;
+ax.XAxis.FontSize = 10; % Adjust font size
+ax.YAxis.FontSize = 12;
+ylabel('2SLS Estimated Effect');
+title('2SLS Estimates for Different Industries');
+grid on;
+
+% Adjust figure size to prevent label cutoff
+set(gcf, 'Position', [100, 100, 1500, 700]); % Make the figure larger
+
+% Save figure
+saveas(gcf, fullfile(save_path, '2SLS_Industry_Effects.png'));
+
+
+%% Implementing Alternative IVs in 2SLS
+
+% Define alternative IVs
+FFR = data76(:, 22);   % Federal Funds Rate (original IV)
+M2 = data76(:, 9);     % Money Supply (M2)
+ConsExp = data76(:, 37); % Consumer Expectations
+
+% Store IVs for iteration
+IV_options = {FFR, M2, ConsExp};
+IV_names = {'FFR', 'M2', 'Consumer Expectations'};
+
+% Loop over different IV choices
+for iv_idx = 1:length(IV_options)
+    IV = IV_options{iv_idx};
+
+    % Remove missing values
+    valid_idx = ~isnan(IV) & ~isnan(PolicyShock);
+    IV = IV(valid_idx);
+    PolicyShock_valid = PolicyShock(valid_idx);
+    IndustryData_valid = IndustryData(valid_idx, :); % Ensure consistent data size
+
+    % First-stage regression: Predict PolicyShock using IV
+    X1 = [ones(size(IV)), IV];  
+    b1 = X1 \ PolicyShock_valid;  
+    PolicyShock_hat = X1 * b1;  
+
+    % Second-stage regression: Estimate PPI/PCE impact
+    effects = zeros(length(IndustryColumns), 1);
+    for i = 1:length(IndustryColumns)
+        Y = IndustryData_valid(:, i);
+        X2 = [ones(size(PolicyShock_hat)), PolicyShock_hat];
+        b2 = X2 \ Y;
+        effects(i) = b2(2);
+    end
+
+    % Save and display results
+    fprintf('\n2SLS Estimated Effects using %s as IV:\n', IV_names{iv_idx});
+    disp(effects);
+
+    % Save results in a text file
+    txt_file = fullfile(save_path, ['2SLS_Results_', IV_names{iv_idx}, '.txt']);
+    fileID = fopen(txt_file, 'w');
+    fprintf(fileID, '2SLS Estimated Effects using %s as IV\n', IV_names{iv_idx});
+    fprintf(fileID, 'REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-\n');
+    for i = 1:length(IndustryColumns)
+        fprintf(fileID, '%s: %.4f\n', B_industry_names{i}, effects(i));
+    end
+    fclose(fileID);
+end
+% generate bar chart
+figure;
+for iv_idx = 1:length(IV_options)
+    IV = IV_options{iv_idx};
+
+    % Remove missing values
+    valid_idx = ~isnan(IV) & ~isnan(PolicyShock);
+    IV = IV(valid_idx);
+    PolicyShock_valid = PolicyShock(valid_idx);
+    IndustryData_valid = IndustryData(valid_idx, :);
+
+    % First-stage regression
+    X1 = [ones(size(IV)), IV];  
+    b1 = X1 \ PolicyShock_valid;  
+    PolicyShock_hat = X1 * b1;  
+
+    % Second-stage regression
+    effects = zeros(length(IndustryColumns), 1);
+    for i = 1:length(IndustryColumns)
+        Y = IndustryData_valid(:, i);
+        X2 = [ones(size(PolicyShock_hat)), PolicyShock_hat];
+        b2 = X2 \ Y;
+        effects(i) = b2(2);
+    end
+
+    % Plot bar chart
+    subplot(1,3,iv_idx);
+    bar(effects);
+    xticks(1:length(IndustryColumns));
+    xticklabels(B_industry_names);
+    xtickangle(45);
+    title(['2SLS using ', IV_names{iv_idx}]);
+    ylabel('Estimated Effect');
+    grid on;
+end
+
+% Adjust figure size
+set(gcf, 'Position', [100, 100, 1800, 600]); 
+
+% Save figure
+saveas(gcf, fullfile(save_path, '2SLS_Comparison_IVs.png'));
+
+%% Robustness Test
+
+% Define IVs
+IVs = {data76(:, 22), data76(:, 9), data76(:, 37)}; % {FFR, M2, Consumer Expectations}
+IV_names = {'FFR', 'M2', 'Consumer Expectations'};
+
+% Define endogenous variable (PolicyShock)
+PolicyShock = data76(:, 28);
+
+% Storage for results
+Weak_IV_Fstats = zeros(1, length(IVs));
+Hausman_p_values = zeros(length(B_industry_names), length(IVs));
+
+% Loop over each IV
+for iv_idx = 1:length(IVs)
+    IV = IVs{iv_idx}; % Select current IV
+    disp(['Testing IV: ', IV_names{iv_idx}]);
+
+    % Remove missing values
+    valid_idx = ~isnan(IV) & ~isnan(PolicyShock);
+    IV = IV(valid_idx);
+    PolicyShock_clean = PolicyShock(valid_idx);
+    IndustryData_clean = data76(valid_idx, IndustryColumns); 
+
+    % ** Weak IV Test (First-stage F-statistic) **
+    X1 = [ones(size(IV)), IV];  % Add intercept
+    [b1,~,~,~,stats] = regress(PolicyShock_clean, X1);
+    F_stat = stats(2); % Extract F-statistic
+    Weak_IV_Fstats(iv_idx) = F_stat;
+
+    % Display F-statistic result
+    fprintf('First-stage F-statistic for IV (%s): %.2f\n', IV_names{iv_idx}, F_stat);
+    if F_stat < 10
+        warning('Weak IV detected for %s! Consider alternative instruments.', IV_names{iv_idx});
+    else
+        disp(['IV (', IV_names{iv_idx}, ') is strong.']);
+    end
+
+    % ** Hausman Test (Endogeneity Test) **
+    PolicyShock_hat = X1 * b1;  % Predicted values
+    residuals = PolicyShock_clean - PolicyShock_hat;
+
+    for i = 1:length(IndustryColumns)
+        Y = IndustryData_clean(:, i);  % Extract industry data
+        X2 = [ones(size(PolicyShock_hat)), PolicyShock_hat, residuals];  % Include residuals
+
+        % Run OLS regression with residuals
+        [b2,~,~,~,stats] = regress(Y, X2);
+        p_value = 1 - fcdf(stats(2), 1, length(PolicyShock_hat) - 3); % Compute p-value
+
+        % Store and display Hausman test result
+        Hausman_p_values(i, iv_idx) = p_value;
+        fprintf('Hausman test p-value for Industry %s (IV: %s): %.4f\n', B_industry_names{i}, IV_names{iv_idx}, p_value);
+
+        if p_value < 0.05
+            disp('Endogeneity detected! 2SLS is preferred.');
+        else
+            disp('No endogeneity detected. OLS estimates are valid.');
+        end
+    end
+end
+
+% ** Summary of Results **
+disp('REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH');
+disp('Weak IV Test (First-stage F-statistics):');
+disp(array2table(Weak_IV_Fstats, 'VariableNames', IV_names));
+
+disp('REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH');
+disp('Hausman Test Results (p-values for endogeneity test):');
+disp(array2table(Hausman_p_values, 'VariableNames', IV_names, 'RowNames', B_industry_names));
+
+% Define file path
+results_file = fullfile(save_path, 'Robustness_Tests_Results.txt');
+fileID = fopen(results_file, 'w'); % Open file for writing
+
+% Write F-statistics results
+fprintf(fileID, 'Weak IV Test (First-stage F-statistics):\n');
+fprintf(fileID, 'REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH\n');
+for iv_idx = 1:length(IV_names)
+    fprintf(fileID, '%s: %.2f\n', IV_names{iv_idx}, Weak_IV_Fstats(iv_idx));
+end
+fprintf(fileID, '\n');
+
+% Write Hausman Test results
+fprintf(fileID, 'Hausman Test Results (p-values for endogeneity test):\n');
+fprintf(fileID, 'REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH\n');
+for i = 1:length(B_industry_names)
+    for iv_idx = 1:length(IV_names)
+        fprintf(fileID, 'Industry: %s, IV: %s, p-value: %.4f\n', B_industry_names{i}, IV_names{iv_idx}, Hausman_p_values(i, iv_idx));
+    end
+end
+
+% Close file
+fclose(fileID);
+disp('Robustness test results saved successfully.');
+##### SOURCE END #####
+-->
+
+
+</body></html>
